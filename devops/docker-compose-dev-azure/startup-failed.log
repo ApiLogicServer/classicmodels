@@ -1,72 +1,175 @@
-Connecting...
-2023-08-10T22:03:52  Welcome, you are now connected to log-streaming service.
-Starting Log Tail -n 10 of existing logs ----
-/home/LogFiles/__lastCheckTime.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)08/10/2023 22:03:30
-/home/LogFiles/kudu/trace/04c7df6d3075-06f8e692-a17e-4023-8603-5f3f9d5b8117.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/04c7df6d3075-06f8e692-a17e-4023-8603-5f3f9d5b8117.txt)
-2023-08-10T21:25:33  Startup Request, url: /api/logstream/, method: GET, type: request, pid: 91,1,7, ScmType: None
-/home/LogFiles/kudu/trace/c3b771694387-b8f53d93-534d-40aa-bca2-97a0f043199f.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/c3b771694387-b8f53d93-534d-40aa-bca2-97a0f043199f.txt)
-2023-08-10T14:36:23  Startup Request, url: /detectors, method: GET, type: request, pid: 86,1,5, ScmType: None
-/home/LogFiles/kudu/trace/f9e938e3b8b8-9a2cb9c6-9403-4163-a06c-1b785d15b5bf.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/f9e938e3b8b8-9a2cb9c6-9403-4163-a06c-1b785d15b5bf.txt)
-2023-08-10T21:43:36  Startup Request, url: /api/logstream/, method: GET, type: request, pid: 86,1,16, ScmType: None
-/home/LogFiles/kudu/trace/fb9e6550d3d0-0caa0751-4765-4d91-a107-d1a62ddc1ee6.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/fb9e6550d3d0-0caa0751-4765-4d91-a107-d1a62ddc1ee6.txt)
-2023-08-10T16:08:57  Startup Request, url: /api/logstream/, method: GET, type: request, pid: 86,1,5, ScmType: None
-/home/LogFiles/2023_08_10_lw0sdlwk00000G_api-logic-server_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_api-logic-server_docker.log)
-2023-08-10T19:54:41.053811854Z API Logic Server - Start Default App - redirect /admin-app/index.html
-2023-08-10T19:54:41.060134449Z 172.16.9.1 - - [10/Aug/2023 19:54:41] "[32mGET / HTTP/1.1[0m" 302 -
-2023-08-10T19:59:41.295344903Z API Logic Server - Start Default App - redirect /admin-app/index.html
-2023-08-10T19:59:41.295384905Z 172.16.9.1 - - [10/Aug/2023 19:59:41] "[32mGET / HTTP/1.1[0m" 302 -
-2023-08-10T20:04:41.586190079Z API Logic Server - Start Default App - redirect /admin-app/index.html
-2023-08-10T20:04:41.591233119Z 172.16.9.1 - - [10/Aug/2023 20:04:41] "[32mGET / HTTP/1.1[0m" 302 -
-/home/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log)
-2023-08-10T22:03:39.076252968Z 2023-08-10T22:03:39.076074Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-2023-08-10T22:03:44.540999475Z 2023-08-10T22:03:44.540571Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-2023-08-10T22:03:45.319680485Z 2023-08-10T22:03:45.319388Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
-2023-08-10T22:03:45.422916845Z 2023-08-10T22:03:45.422561Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
-2023-08-10T22:03:45.568563242Z 2023-08-10T22:03:45.568172Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
-2023-08-10T22:03:45.820020223Z 2023-08-10T22:03:45.819029Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
-2023-08-10T22:03:45.830649434Z 2023-08-10T22:03:45.820248Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-2023-08-10T22:03:45.859135502Z 2023-08-10T22:03:45.857389Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
-2023-08-10T22:03:45.972478248Z 2023-08-10T22:03:45.972333Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
-/home/LogFiles/2023_08_10_lw0sdlwk00000G_mysql-service_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_mysql-service_docker.log)
-2023-08-10T19:51:17.872864366Z 2023-08-10T19:51:17.872688Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-2023-08-10T19:51:22.471118426Z 2023-08-10T19:51:22.470828Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-2023-08-10T19:51:23.731128860Z 2023-08-10T19:51:23.730732Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
-2023-08-10T19:51:23.839865294Z 2023-08-10T19:51:23.839595Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
-2023-08-10T19:51:23.976465043Z 2023-08-10T19:51:23.966858Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
-2023-08-10T19:51:24.275237348Z 2023-08-10T19:51:24.268429Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
-2023-08-10T19:51:24.284713095Z 2023-08-10T19:51:24.284365Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-2023-08-10T19:51:24.308049297Z 2023-08-10T19:51:24.307448Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
-2023-08-10T19:51:24.403016380Z 2023-08-10T19:51:24.402847Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
-Ending Log Tail of existing logs ---
-Starting Live Log Stream ---
-2023-08-10T22:03:30.568Z INFO  - Starting multi-container app..
-2023-08-10T22:03:32.072Z INFO  - latest Pulling from apilogicserver/mysql8.0
-2023-08-10T22:03:32.073Z INFO  -  Digest: sha256:4388016819096f2b1b054d69261950433c11cff1464985166d90af06b288819a
-2023-08-10T22:03:32.080Z INFO  -  Status: Image is up to date for apilogicserver/mysql8.0:latest
-2023-08-10T22:03:32.084Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
-2023-08-10T22:03:32.137Z INFO  - Starting container for site
-2023-08-10T22:03:32.138Z INFO  - docker run -d -p 7237:3306 --name classicmodels_mysql-service_0_16a327cd -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/mysql8.0:latest
-2023-08-10T22:03:33.077Z INFO  - latest Pulling from apilogicserver/classicmodels
-2023-08-10T22:03:33.078Z INFO  -  Digest: sha256:a2f7cabb1fb90c1d0e3ddc2bbefeee35cdbacbb0f4af07f459e19103e913870f
-2023-08-10T22:03:33.079Z INFO  -  Status: Image is up to date for apilogicserver/classicmodels:latest
-2023-08-10T22:03:33.089Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
-2023-08-10T22:03:33.134Z INFO  - Starting container for site
-2023-08-10T22:03:33.138Z INFO  - docker run -d  --name classicmodels_api-logic-server_0_16a327cd -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/classicmodels python app/api_logic_server_run.py
-2023-08-10T22:03:51.603Z ERROR - multi-container unit was not started successfully
-2023-08-10T22:03:51.612Z INFO  - Container logs from classicmodels_mysql-service_0_16a327cd = 2023-08-10T22:03:35.987593082Z 2023-08-10 22:03:35+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
-2023-08-10T22:03:37.288759888Z 2023-08-10 22:03:37+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
-2023-08-10T22:03:37.354848678Z 2023-08-10 22:03:37+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
-2023-08-10T22:03:39.064691910Z 2023-08-10T22:03:38.991972Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.23) starting as process 1
-2023-08-10T22:03:39.076252968Z 2023-08-10T22:03:39.076074Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-2023-08-10T22:03:44.540999475Z 2023-08-10T22:03:44.540571Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-2023-08-10T22:03:45.319680485Z 2023-08-10T22:03:45.319388Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
-2023-08-10T22:03:45.422916845Z 2023-08-10T22:03:45.422561Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
-2023-08-10T22:03:45.568563242Z 2023-08-10T22:03:45.568172Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
-2023-08-10T22:03:45.820020223Z 2023-08-10T22:03:45.819029Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
-2023-08-10T22:03:45.830649434Z 2023-08-10T22:03:45.820248Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-2023-08-10T22:03:45.859135502Z 2023-08-10T22:03:45.857389Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
-2023-08-10T22:03:45.972478248Z 2023-08-10T22:03:45.972333Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
-2023-08-10T22:03:53.677Z INFO  - Container logs from classicmodels_api-logic-server_0_16a327cd = 2023-08-10T22:03:42.210961877Z python: can't open file '/home/api_logic_project/app/api_logic_server_run.py': [Errno 2] No such file or directory
-2023-08-10T22:03:47.144051634Z python: can't open file '/home/api_logic_project/app/api_logic_server_run.py': [Errno 2] No such file or directory
-2023-08-10T22:03:50.642136492Z python: can't open file '/home/api_logic_project/app/api_logic_server_run.py': [Errno 2] No such file or directory
-2023-08-10T22:03:54.020Z INFO  - Stopping site classicmodels because it failed during startup.
+
+2023-08-10T22:49:34.044Z INFO  -  Digest: sha256:a2f7cabb1fb90c1d0e3ddc2bbefeee35cdbacbb0f4af07f459e19103e913870f
+2023-08-10T22:49:34.049Z INFO  -  Status: Downloaded newer image for apilogicserver/classicmodels:latest
+2023-08-10T22:49:34.066Z INFO  - Pull Image successful, Time taken: 1 Minutes and 35 Seconds
+2023-08-10T22:49:34.141Z INFO  - Starting container for site
+2023-08-10T22:49:34.142Z INFO  - docker run -d  --name classicmodels_api-logic-server_0_6bf50ccf -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/classicmodels
+2023-08-10T22:51:00  No new trace in the past 1 min(s).
+2023-08-10T22:52:00  No new trace in the past 2 min(s).
+2023-08-10T22:53:00  No new trace in the past 3 min(s).
+2023-08-10T22:53:24.690Z ERROR - multi-container unit was not started successfully
+2023-08-10T22:53:24.696Z INFO  - Container logs from classicmodels_mysql-service_0_6bf50ccf = 2023-08-10T22:49:38.705062598Z 2023-08-10 22:49:38+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
+2023-08-10T22:49:40.893991548Z 2023-08-10 22:49:40+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2023-08-10T22:49:40.983468582Z 2023-08-10 22:49:40+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
+2023-08-10T22:49:43.051133920Z 2023-08-10T22:49:42.947708Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.23) starting as process 1
+2023-08-10T22:49:43.075239334Z 2023-08-10T22:49:43.075053Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2023-08-10T22:49:49.280710102Z 2023-08-10T22:49:49.280338Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2023-08-10T22:49:50.635279075Z 2023-08-10T22:49:50.634975Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2023-08-10T22:49:50.808752240Z 2023-08-10T22:49:50.808463Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2023-08-10T22:49:50.961411237Z 2023-08-10T22:49:50.960985Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2023-08-10T22:49:51.373977115Z 2023-08-10T22:49:51.373142Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2023-08-10T22:49:51.381369958Z 2023-08-10T22:49:51.374118Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2023-08-10T22:49:51.415344035Z 2023-08-10T22:49:51.407780Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2023-08-10T22:49:51.819187478Z 2023-08-10T22:49:51.819064Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2023-08-10T22:53:27.823Z INFO  - Container logs from classicmodels_api-logic-server_0_6bf50ccf = 2023-08-10T22:49:49.342368869Z
+2023-08-10T22:49:49.342520776Z API Logic Project (api_logic_project) Starting with CLI args:
+2023-08-10T22:49:49.342531276Z .. ./api_logic_server_run.py
+2023-08-10T22:49:49.342537076Z
+2023-08-10T22:49:49.353506886Z Created August 08, 2023 13:27:28 at /home/api_logic_project
+2023-08-10T22:49:49.353541488Z
+2023-08-10T22:49:49.380172126Z
+2023-08-10T22:49:49.380238329Z ENV args:
+2023-08-10T22:49:49.380246029Z .. flask_host: 0.0.0.0, port: 5656,
+2023-08-10T22:49:49.380251830Z .. swagger_host: localhost, swagger_port: 5656,
+2023-08-10T22:49:49.380257330Z .. client_uri: None,
+2023-08-10T22:49:49.380262530Z .. http_scheme: http, api_prefix: /api,
+2023-08-10T22:49:49.380267830Z .. | verbose: True, create_and_run: False
+2023-08-10T22:49:49.380280131Z
+2023-08-10T22:49:49.380285331Z
+2023-08-10T22:49:49.809903404Z Data Model Loaded, customizing...
+2023-08-10T22:49:49.836089722Z
+2023-08-10T22:49:49.838085415Z Logic Bank 01.08.04 - 1 rules loaded
+2023-08-10T22:49:49.844507313Z Declare   Logic complete - logic/declare_logic.py (rules + code) -- 16 tables loaded
+2023-08-10T22:49:49.844543315Z
+2023-08-10T22:49:55.626403167Z Declare   API - api/expose_api_models, endpoint for each table on localhost:5656, customizing...
+2023-08-10T22:49:57.137080969Z
+2023-08-10T22:49:57.137170373Z API Logic Project loaded (not WSGI), version 09.02.03
+2023-08-10T22:49:57.137180173Z  (running from docker container at flask_host: 0.0.0.0 - may require refresh)
+2023-08-10T22:49:57.137196774Z
+2023-08-10T22:49:57.145801374Z API Logic Project (name: api_logic_project) starting:
+2023-08-10T22:49:57.145844476Z ..Explore data and API at http_scheme://swagger_host:port http://localhost:5656
+2023-08-10T22:49:57.145852576Z .... with flask_host: 0.0.0.0
+2023-08-10T22:49:57.145858876Z .... and  swagger_port: 5656
+2023-08-10T22:49:57.147312444Z
+2023-08-10T22:49:57.147336145Z
+2023-08-10T22:49:57.147344045Z sys_info here
+2023-08-10T22:49:57.147350445Z
+2023-08-10T22:49:57.147356646Z Environment Variables...
+2023-08-10T22:49:57.147362846Z .. PATH = /usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2023-08-10T22:49:57.147369246Z .. HOSTNAME = dd2ec11e8ddc
+2023-08-10T22:49:57.147375347Z .. COMPUTERNAME = lw0sdlwk00000G
+2023-08-10T22:49:57.147381547Z .. PLATFORM_VERSION = 100.0.7.518
+2023-08-10T22:49:57.147387647Z .. APPSVC_RUN_ZIP = FALSE
+2023-08-10T22:49:57.147393647Z .. WEBSITE_SKU = Standard
+2023-08-10T22:49:57.147399848Z .. WEBSITE_ISOLATION = lxc
+2023-08-10T22:49:57.147425049Z .. REGION_NAME = westus
+2023-08-10T22:49:57.147431749Z .. DIAGNOSTIC_LOGS_MOUNT_PATH = /var/log/diagnosticLogs
+2023-08-10T22:49:57.147437749Z .. USE_DIAG_SERVER = true
+2023-08-10T22:49:57.147443750Z .. WEBSITE_OWNER_NAME = 7cbce59a-9dd7-4133-9534-62bd6d8b299e+myResourceGroup-WestUSwebspace-Linux
+2023-08-10T22:49:57.147449950Z .. WEBSITE_RESOURCE_GROUP = myresourcegroup
+2023-08-10T22:49:57.147455950Z .. WEBSITE_HTTPLOGGING_RETENTION_DAYS = 4
+2023-08-10T22:49:57.147461951Z .. APPSETTING_WEBSITE_HTTPLOGGING_RETENTION_DAYS = 4
+2023-08-10T22:49:57.147467851Z .. ScmType = None
+2023-08-10T22:49:57.147473851Z .. APPSETTING_ScmType = None
+2023-08-10T22:49:57.147479751Z .. WEBSITE_SITE_NAME = classicmodels
+2023-08-10T22:49:57.147485652Z .. APPSETTING_WEBSITE_SITE_NAME = classicmodels
+2023-08-10T22:49:57.147491652Z .. WEBSITE_AUTH_ENABLED = False
+2023-08-10T22:49:57.147497552Z .. APPSETTING_WEBSITE_AUTH_ENABLED = False
+2023-08-10T22:49:57.147503553Z .. APILOGICPROJECT_VERBOSE = true
+2023-08-10T22:49:57.147509453Z .. SECURITY_ENABLED = false
+2023-08-10T22:49:57.147515353Z .. WEBSITE_AUTH_ENCRYPTION_KEY = 126B511F172974FDBAA48DE2D218A1EC0F8461FEA16C75905E9041686A5C5D8F
+2023-08-10T22:49:57.147521553Z .. WEBSITE_AUTH_SIGNING_KEY = 15D875D89C94D6590A1EC449FEC5618309B1E097A956BDA91CC40D7227770498
+2023-08-10T22:49:57.147527454Z .. WEBSITE_ROLE_INSTANCE_ID = 0
+2023-08-10T22:49:57.147533454Z.. WEBSITE_HOSTNAME = classicmodels.azurewebsites.net
+2023-08-10T22:49:57.147539354Z .. WEBSITE_HOME_STAMPNAME = waws-prod-bay-249
+2023-08-10T22:49:57.147545254Z .. DOCKER_SERVER_VERSION = 19.03.15+azure
+2023-08-10T22:49:57.147551155Z .. NUM_CORES = 1
+2023-08-10T22:49:57.147556955Z .. WEBSITE_INSTANCE_ID = 0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4
+2023-08-10T22:49:57.147562955Z .. HTTP_LOGGING_ENABLED = 1
+2023-08-10T22:49:57.147568856Z .. WEBSITE_USE_DIAGNOSTIC_SERVER = False
+2023-08-10T22:49:57.147574556Z .. LANG = C.UTF-8
+2023-08-10T22:49:57.147580356Z .. GPG_KEY = A035C8C19219BA821ECEA86B64E628F8D684696D
+2023-08-10T22:49:57.147586156Z .. PYTHON_VERSION = 3.11.4
+2023-08-10T22:49:57.147591957Z .. PYTHON_PIP_VERSION = 23.1.2
+2023-08-10T22:49:57.147597857Z .. PYTHON_SETUPTOOLS_VERSION = 65.5.1
+2023-08-10T22:49:57.147603657Z .. PYTHON_GET_PIP_URL = https://github.com/pypa/get-pip/raw/0d8570dc44796f4369b652222cf176b3db6ac70e/public/get-pip.py
+2023-08-10T22:49:57.147609757Z .. PYTHON_GET_PIP_SHA256 = 96461deced5c2a487ddc65207ec5a9cffeca0d34e7af7ea1afc470ff0d746207
+2023-08-10T22:49:57.147615658Z .. APILOGICSERVER_RUNNING = DOCKER
+2023-08-10T22:49:57.147621558Z .. APILOGICSERVER_FROM = python:3.11.4-slim-bullseye
+2023-08-10T22:49:57.147627358Z .. HOME = /home/api_logic_server
+2023-08-10T22:49:57.147638959Z .. SECRET_KEY = whatnothow
+2023-08-10T22:49:57.147645159Z .. SQLALCHEMY_TRACK_MODIFICATIONS = False
+2023-08-10T22:49:57.147651859Z .. SQLAlCHEMY_ECHO = false
+2023-08-10T22:49:57.147657960Z
+2023-08-10T22:49:57.147663860Z
+2023-08-10T22:49:57.147669560Z flask_app.config:
+2023-08-10T22:49:57.147675260Z
+2023-08-10T22:49:57.147681361Z <Config {'DEBUG': None,
+2023-08-10T22:49:57.147687161Z 	'TESTING': False,
+2023-08-10T22:49:57.147693261Z 	'PROPAGATE_EXCEPTIONS': False,
+2023-08-10T22:49:57.147699062Z 	'SECRET_KEY': 'whatnothow',
+2023-08-10T22:49:57.147704862Z 	'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31),
+2023-08-10T22:49:57.147710662Z 	'USE_X_SENDFILE': False,
+2023-08-10T22:49:57.147716462Z 	'SERVER_NAME': None,
+2023-08-10T22:49:57.147722263Z 	'APPLICATION_ROOT': '/',
+2023-08-10T22:49:57.147728063Z 	'SESSION_COOKIE_NAME': 'session',
+2023-08-10T22:49:57.147733763Z 	'SESSION_COOKIE_DOMAIN': None,
+2023-08-10T22:49:57.147739463Z 	'SESSION_COOKIE_PATH': None,
+2023-08-10T22:49:57.147745264Z 	'SESSION_COOKIE_HTTPONLY': True,
+2023-08-10T22:49:57.147750964Z 	'SESSION_COOKIE_SECURE': False,
+2023-08-10T22:49:57.147756664Z 	'SESSION_COOKIE_SAMESITE': None,
+2023-08-10T22:49:57.147762465Z 	'SESSION_REFRESH_EACH_REQUEST': True,
+2023-08-10T22:49:57.147768165Z 	'MAX_CONTENT_LENGTH': None,
+2023-08-10T22:49:57.147773865Z 	'SEND_FILE_MAX_AGE_DEFAULT': None,
+2023-08-10T22:49:57.147779665Z 	'TRAP_BAD_REQUEST_ERRORS': None,
+2023-08-10T22:49:57.147785366Z 	'TRAP_HTTP_EXCEPTIONS': False,
+2023-08-10T22:49:57.147791166Z 	'EXPLAIN_TEMPLATE_LOADING': False,
+2023-08-10T22:49:57.147796966Z 	'PREFERRED_URL_SCHEME': 'http',
+2023-08-10T22:49:57.147802666Z 	'TEMPLATES_AUTO_RELOAD': None,
+2023-08-10T22:49:57.147808467Z 	'MAX_COOKIE_SIZE': 4093,
+2023-08-10T22:49:57.147814067Z 	'API_PREFIX': '/api',
+2023-08-10T22:49:57.147819767Z 	'FLASK_HOST': '0.0.0.0',
+2023-08-10T22:49:57.147825567Z 	'SWAGGER_HOST': 'localhost',
+2023-08-10T22:49:57.147831268Z 	'PORT': '5656',
+2023-08-10T22:49:57.147836968Z 	'SWAGGER_PORT': '5656',
+2023-08-10T22:49:57.147842768Z 	'HTTP_SCHEME': 'http',
+2023-08-10T22:49:57.147848469Z 	'VERBOSE': True,
+2023-08-10T22:49:57.147854169Z 	'CREATE_AND_RUN': False,
+2023-08-10T22:49:57.147859869Z 	'CREATED_API_PREFIX': '/api',
+2023-08-10T22:49:57.147865669Z 	'CREATED_FLASK_HOST': '0.0.0.0',
+2023-08-10T22:49:57.147871470Z 	'CREATED_HTTP_SCHEME': 'http',
+2023-08-10T22:49:57.147882870Z 	'CREATED_PORT': '5656',
+2023-08-10T22:49:57.147888970Z 	'CREATED_SWAGGER_HOST': 'localhost',
+2023-08-10T22:49:57.147894771Z 	'CREATED_SWAGGER_PORT': '5656',
+2023-08-10T22:49:57.147900671Z 	'FLASK_APP': None,
+2023-08-10T22:49:57.147906471Z 	'FLASK_ENV': None,
+2023-08-10T22:49:57.147912271Z 	'OPT_LOCKING': 'optional',
+2023-08-10T22:49:57.147918072Z 	'SECURITY_ENABLED': False,
+2023-08-10T22:49:57.147923972Z 	'SECURITY_PROVIDER': None,
+2023-08-10T22:49:57.147929872Z 	'SQLALCHEMY_DATABASE_URI': 'mysql+pymysql://root:p@localhost:3306/classicmodels',
+2023-08-10T22:49:57.147935873Z 	'SQLALCHEMY_DATABASE_URI_AUTHENTICATION': 'mysql+pymysql://root:p@localhost:3306/authdb',
+2023-08-10T22:49:57.147941873Z 	'SQLALCHEMY_TRACK_MODIFICATIONS': False}>
+2023-08-10T22:49:57.147947873Z
+2023-08-10T22:49:57.147953573Z
+2023-08-10T22:49:57.147959274Z PYTHONPATH..
+2023-08-10T22:49:57.147964974Z ../home/api_logic_project
+2023-08-10T22:49:57.147973874Z ../usr/local/lib/python311.zip
+2023-08-10T22:49:57.147979875Z ../usr/local/lib/python3.11
+2023-08-10T22:49:57.147985775Z ../usr/local/lib/python3.11/lib-dynload
+2023-08-10T22:49:57.147991575Z ../usr/local/lib/python3.11/site-packages
+2023-08-10T22:49:57.147997475Z ../home/api_logic_project
+2023-08-10T22:49:57.148003276Z ../home/api_logic_server
+2023-08-10T22:49:57.148008976Z
+2023-08-10T22:49:57.148014676Z sys.prefix (venv): /usr/local
+2023-08-10T22:49:57.148020877Z
+2023-08-10T22:49:57.148026577Z
+2023-08-10T22:49:57.148032277Z hostname=dd2ec11e8ddc on local_ip=172.16.0.4
+2023-08-10T22:49:57.148038077Z
+2023-08-10T22:49:57.148043878Z
+2023-08-10T22:49:57.148049478Z  * Serving Flask app 'API Logic Server'
+2023-08-10T22:49:57.172387907Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-08-10T22:49:57.172431109Z  * Running on all addresses (0.0.0.0)
+2023-08-10T22:49:57.172438410Z  * Running on http://127.0.0.1:5656
+2023-08-10T22:49:57.172443710Z  * Running on http://172.16.21.3:5656
+2023-08-10T22:49:57.172448910Z [33mPress CTRL+C to quit[0m
+2023-08-10T22:53:34.713Z INFO  - Stopping site classicmodels because it failed during startup.
