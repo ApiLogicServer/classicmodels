@@ -10,9 +10,9 @@
 mkdir classicmodels
 cd classicmodels
 
-git clone https://github.com/Azure-Samples/multicontainerclassicmodels
+git clone https://github.com/ApiLogicServer/classicmodels.git
 
-cd multicontainerclassicmodels
+cd classicmodels
 
 # create container group
 az group create --name myResourceGroup --location "Western US"
@@ -21,7 +21,7 @@ az group create --name myResourceGroup --location "Western US"
 az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --sku S1 --is-linux
 
 # create docker compose app
-az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name <app-name> --multicontainer-config-type compose --multicontainer-config-file docker-compose-wordpress.yml
+az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev/docker-compose-dev.yml
 
 # browse to the app
 # http://<app-name>.azurewebsites.net
