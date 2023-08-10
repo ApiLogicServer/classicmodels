@@ -37,7 +37,7 @@ services:
             # relative path - thanks https://stackoverflow.com/questions/46907558/docker-compose-relative-paths-vs-docker-volume
             # - /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/org_git/docker-compose-nw-postgres:/app
             # but on Az, use cloud storage
-            - classicmodels:/app
+            - ${WEBAPP_STORAGE_HOME}/classicmodels:/app
         # https://stackoverflow.com/questions/39460892/gunicorn-no-module-named-myproject
         command: python api_logic_server_run.py
         # command:  bash /app/start.sh
