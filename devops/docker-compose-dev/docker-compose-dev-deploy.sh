@@ -15,7 +15,7 @@ git clone https://github.com/ApiLogicServer/classicmodels.git
 cd classicmodels
 
 # create container group
-az group create --name myResourceGroup --location "Western US"
+az group create --name myResourceGroup --location "westus"
 
 # create service plan
 az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --sku S1 --is-linux
@@ -23,5 +23,5 @@ az appservice plan create --name myAppServicePlan --resource-group myResourceGro
 # create docker compose app
 az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev/docker-compose-dev.yml
 
-# browse to the app
-# http://<app-name>.azurewebsites.net
+# browse to the app (failed - :( Application Error)
+# https://classicmodels.azurewebsites.net
