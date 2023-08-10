@@ -53,4 +53,4 @@ services:
         # https://stackoverflow.com/questions/39460892/gunicorn-no-module-named-myproject
         # works, not required; command: python api_logic_server_run.py
         # command:  bash /app/start.sh
-        working_dir: /home/api_logic_project
+        # working_dir: /home/api_logic_project
