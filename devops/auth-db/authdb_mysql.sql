@@ -6,7 +6,8 @@
 
 -- mysql -u root -p
 -- use authdb
--- 
+-- cloud
+-- mysql -u root -p --host=mysql-service
 
 DROP DATABASE IF EXISTS `authdb`;
 CREATE DATABASE `authdb`;
