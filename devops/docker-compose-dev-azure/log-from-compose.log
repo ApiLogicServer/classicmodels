@@ -1,0 +1,224 @@
+Requesting a Cloud Shell.Succeeded. 
+Connecting terminal...
+
+val [ ~ ]$ cd classicmodels
+val [ ~/classicmodels ]$ git pull
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 13 (delta 11), reused 9 (delta 7), pack-reused 0
+Unpacking objects: 100% (13/13), 1.40 KiB | 23.00 KiB/s, done.
+From https://github.com/ApiLogicServer/classicmodels
+   1010264..49a196a  main       -> origin/main
+Updating 1010264..49a196a
+Fast-forward
+ devops/auth-db/authdb_mysql.sql                        | 3 ++-
+ devops/docker-compose-dev/docker-compose-dev-deploy.sh | 6 ++++--
+ devops/docker-compose-dev/docker-compose-dev.yml       | 2 +-
+ 3 files changed, 7 insertions(+), 4 deletions(-)
+val [ ~/classicmodels ]$ az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev/docker-compose-dev.yml
+Webapp 'classicmodels' already exists. The command will use the existing app's settings.
+{
+  "availabilityState": "Normal",
+  "clientAffinityEnabled": true,
+  "clientCertEnabled": false,
+  "clientCertExclusionPaths": null,
+  "clientCertMode": "Required",
+  "cloningInfo": null,
+  "containerSize": 0,
+  "customDomainVerificationId": "318FE0D0D7F9CFB0E2619FA24C9F6DBFACC9A49BD2773B7A90985638ADED8417",
+  "dailyMemoryTimeQuota": 0,
+  "defaultHostName": "classicmodels.azurewebsites.net",
+  "enabled": true,
+  "enabledHostNames": [
+    "classicmodels.azurewebsites.net",
+    "classicmodels.scm.azurewebsites.net"
+  ],
+  "extendedLocation": null,
+  "ftpPublishingUrl": "ftps://waws-prod-bay-249.ftp.azurewebsites.windows.net/site/wwwroot",
+  "hostNameSslStates": [
+    {
+      "certificateResourceId": null,
+      "hostType": "Standard",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "classicmodels.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    },
+    {
+      "certificateResourceId": null,
+      "hostType": "Repository",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "classicmodels.scm.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    }
+  ],
+  "hostNames": [
+    "classicmodels.azurewebsites.net"
+  ],
+  "hostNamesDisabled": false,
+  "hostingEnvironmentProfile": null,
+  "httpsOnly": false,
+  "hyperV": false,
+  "id": "/subscriptions/7cbce59a-9dd7-4133-9534-62bd6d8b299e/resourceGroups/myResourceGroup/providers/Microsoft.Web/sites/classicmodels",
+  "identity": null,
+  "inProgressOperationId": null,
+  "isDefaultContainer": null,
+  "isXenon": false,
+  "keyVaultReferenceIdentity": "SystemAssigned",
+  "kind": "app,linux,container",
+  "lastModifiedTimeUtc": "2023-08-10T19:47:08.860000",
+  "location": "West US",
+  "maxNumberOfWorkers": null,
+  "name": "classicmodels",
+  "outboundIpAddresses": "20.66.29.151,20.66.125.64,20.245.10.162,20.66.125.65,20.66.121.28,20.245.29.178,20.66.124.205,20.66.124.212,20.66.124.213,20.66.124.238,20.66.124.239,20.66.124.253,40.112.243.120",
+  "possibleOutboundIpAddresses": "20.66.29.151,20.66.125.64,20.245.10.162,20.66.125.65,20.66.121.28,20.245.29.178,20.66.124.205,20.66.124.212,20.66.124.213,20.66.124.238,20.66.124.239,20.66.124.253,20.66.125.8,20.66.125.32,20.253.230.240,20.66.125.48,20.253.229.79,20.237.162.222,20.59.109.98,20.66.15.111,20.66.15.114,20.66.125.39,20.66.125.38,20.66.125.56,20.66.29.151,20.66.125.64,20.245.10.162,20.66.125.65,20.66.121.28,20.245.29.178,20.59.105.6,20.253.229.49,20.59.104.120,20.237.166.106,20.237.166.146,20.245.24.248,40.112.243.120",
+  "publicNetworkAccess": null,
+  "redundancyMode": "None",
+  "repositorySiteName": "classicmodels",
+  "reserved": true,
+  "resourceGroup": "myResourceGroup",
+  "scmSiteAlsoStopped": false,
+  "serverFarmId": "/subscriptions/7cbce59a-9dd7-4133-9534-62bd6d8b299e/resourceGroups/myResourceGroup/providers/Microsoft.Web/serverfarms/myAppServicePlan",
+  "siteConfig": {
+    "acrUseManagedIdentityCreds": false,
+    "acrUserManagedIdentityId": null,
+    "alwaysOn": true,
+    "antivirusScanEnabled": null,
+    "apiDefinition": null,
+    "apiManagementConfig": null,
+    "appCommandLine": null,
+    "appSettings": null,
+    "autoHealEnabled": null,
+    "autoHealRules": null,
+    "autoSwapSlotName": null,
+    "azureMonitorLogCategories": null,
+    "azureStorageAccounts": null,
+    "connectionStrings": null,
+    "cors": null,
+    "customAppPoolIdentityAdminState": null,
+    "customAppPoolIdentityTenantState": null,
+    "defaultDocuments": null,
+    "detailedErrorLoggingEnabled": null,
+    "documentRoot": null,
+    "elasticWebAppScaleLimit": 0,
+    "experiments": null,
+    "fileChangeAuditEnabled": null,
+    "ftpsState": null,
+    "functionAppScaleLimit": null,
+    "functionsRuntimeScaleMonitoringEnabled": null,
+    "handlerMappings": null,
+    "healthCheckPath": null,
+    "http20Enabled": true,
+    "http20ProxyFlag": null,
+    "httpLoggingEnabled": null,
+    "ipSecurityRestrictions": [
+      {
+        "action": "Allow",
+        "description": "Allow all access",
+        "headers": null,
+        "ipAddress": "Any",
+        "name": "Allow all",
+        "priority": 2147483647,
+        "subnetMask": null,
+        "subnetTrafficTag": null,
+        "tag": null,
+        "vnetSubnetResourceId": null,
+        "vnetTrafficTag": null
+      }
+    ],
+    "ipSecurityRestrictionsDefaultAction": null,
+    "javaContainer": null,
+    "javaContainerVersion": null,
+    "javaVersion": null,
+    "keyVaultReferenceIdentity": null,
+    "limits": null,
+    "linuxFxVersion": "COMPOSE|IyBwcmVmZXJyZWQuLi4KIyBjZCA8cHJvamVjdD4gKG9yIHVzZSBJREUgdGVybWluYWwpCiMgY2QgZGV2b3BzL2RvY2tlci1jb21wb3NlCiMgc2ggZG9ja2VyLWNvbXBvc2UtZGV2LnNoCgojIG9yLCBmb3IgZGVidWcgLyBtb3JlIGxvZ2dpbmcKIyBzZXQgQVBJTE9HSUNQUk9KRUNUX0NMSUVOVF9VUkksIGFuZCB1c2UgImZvciB0ZXN0aW5nIiwgYmVsb3cKIyBjZCA8cHJvamVjdD4KIyBkb2NrZXIgY29tcG9zZSAtZiAuL2Rldm9wcy9kb2NrZXItY29tcG9zZS9kb2NrZXItY29tcG9zZS1kZXYueW1sIC0tZW52LWZpbGUgLi9kZXZvcHMvZG9ja2VyLWNvbXBvc2UvZW52LWRvY2tlci1jb21wb3NlLmVudiB1cAojIC0tPiBidWlsZHMsIHJ1bnMgYXQgbG9jYWxob3N0Cgp2ZXJzaW9uOiAiMy41IgoKc2VydmljZXM6CiAgICBhcGktbG9naWMtc2VydmVyOgogICAgICAgIGltYWdlOiBhcGlsb2dpY3NlcnZlci9jbGFzc2ljbW9kZWxzCiAgICAgICAgIyBpbnN0ZWFkIHVzaW5nIGEgYnVpbHQgaW1hZ2UsIHVuY29tbWVudCB0aGUgZm9sbG93aW5nIHRvIGJ1aWxkIHRoZSBpbWFnZSBkeW5hbWljYWxseQogICAgICAgICMgYnVpbGQ6CiAgICAgICAgIyAgICAgY29udGV4dDogLi4vLi4KICAgICAgICAjICAgICBkb2NrZXJmaWxlOiAuL2Rldm9wcy9kb2NrZXItY29tcG9zZS9Eb2NrZXJmaWxlLmRvY2tlcmZpbGUKICAgICAgICBlbnZpcm9ubWVudDoKICAgICAgICAgIC0gQVBJTE9HSUNQUk9KRUNUX1ZFUkJPU0U9dHJ1ZQogICAgICAgICAgIyBmb3IgdGVzdGluZwogICAgICAgICAgIyAtIEFQSUxPR0lDUFJPSkVDVF9DTElFTlRfVVJJPS8vMTAuMC4wLjc3CiAgICAgICAgICAjIEhPU1RfSVAgc2V0IGluIGRvY2tlci1jb21wb3NlLnNoL3BzMQogICAgICAgICAgIyAtIEFQSUxPR0lDUFJPSkVDVF9DTElFTlRfVVJJPS8vJHtIT1NUX0lQfQogICAgICAgICAgLSBTRUNVUklUWV9FTkFCTEVEPWZhbHNlCiAgICAgICAgICAjIC0gQVBJTE9HSUNQUk9KRUNUX0hUVFBfU0NIRU1FPWh0dHBzCiAgICAgICAgICAtIFBZVEhPTlBBVEg9L2FwcC9BcGlMb2dpY1Byb2plY3QgCiAgICAgICAgICAtIEFQSUxPR0lDUFJPSkVDVF9TUUxBTENIRU1ZX0RBVEFCQVNFX1VSST1teXNxbCtweW15c3FsOi8vcm9vdDpwQG15c3FsLXNlcnZpY2U6MzMwNi9jbGFzc2ljbW9kZWxzCiAgICAgICAgICAtIEFQSUxPR0lDUFJPSkVDVF9TUUxBTENIRU1ZX0RBVEFCQVNFX1VSSV9BVVRIRU5USUNBVElPTj1teXNxbCtweW15c3FsOi8vcm9vdDpwQG15c3FsLXNlcnZpY2U6MzMwNi9hdXRoZGIKICAgICAgICBleHBvc2U6CiAgICAgICAgICAgIC0gNTY1NgogICAgICAgIHBvcnRzOgogICAgICAgICAgICAtIDU2NTY6NTY1NgogICAgICAgIHZvbHVtZXM6CiAgICAgICAgICAgICMgcmVsYXRpdmUgcGF0aCAtIHRoYW5rcyBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy80NjkwNzU1OC9kb2NrZXItY29tcG9zZS1yZWxhdGl2ZS1wYXRocy12cy1kb2NrZXItdm9sdW1lCiAgICAgICAgICAgICMgLSAvVXNlcnMvdmFsL2Rldi9BcGlMb2dpY1NlcnZlci9BcGlMb2dpY1NlcnZlci1kZXYvb3JnX2dpdC9kb2NrZXItY29tcG9zZS1udy1wb3N0Z3JlczovYXBwCiAgICAgICAgICAgICMgYnV0IG9uIEF6LCB1c2UgY2xvdWQgc3RvcmFnZQogICAgICAgICAgICAtICR7V0VCQVBQX1NUT1JBR0VfSE9NRX0vY2xhc3NpY21vZGVsczovYXBwCiAgICAgICAgIyBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8zOTQ2MDg5Mi9ndW5pY29ybi1uby1tb2R1bGUtbmFtZWQtbXlwcm9qZWN0CiAgICAgICAgIyBjb21tYW5kOiBweXRob24gYXBpX2xvZ2ljX3NlcnZlcl9ydW4ucHkKICAgICAgICAjIGNvbW1hbmQ6ICBiYXNoIC9hcHAvc3RhcnQuc2gKICAgICAgICB3b3JraW5nX2RpcjogL2hvbWUvYXBpX2xvZ2ljX3Byb2plY3QKCiAgICBteXNxbC1zZXJ2aWNlOgogICAgICAgIGltYWdlOiBhcGlsb2dpY3NlcnZlci9teXNxbDguMDpsYXRlc3QKICAgICAgICByZXN0YXJ0OiBhbHdheXMKICAgICAgICBlbnZpcm9ubWVudDoKICAgICAgICAgICAgIyBNWVNRTF9EQVRBQkFTRTogJ2RiJwogICAgICAgICAgICAjIFNvIHlvdSBkb24ndCBoYXZlIHRvIHVzZSByb290LCBidXQgeW91IGNhbiBpZiB5b3UgbGlrZQogICAgICAgICAgICAtIE1ZU1FMX1VTRVI9cm9vdAogICAgICAgICAgICAjIFlvdSBjYW4gdXNlIHdoYXRldmVyIHBhc3N3b3JkIHlvdSBsaWtlCiAgICAgICAgICAgIC0gTVlTUUxfUEFTU1dPUkQ9cAogICAgICAgICAgICAjIFBhc3N3b3JkIGZvciByb290IGFjY2VzcwogICAgICAgICAgICAtIE1ZU1FMX1JPT1RfUEFTU1dPUkQ9cAogICAgICAgIHBvcnRzOgogICAgICAgICAgICAjIDxQb3J0IGV4cG9zZWQ+IDogPE15U1FMIFBvcnQgcnVubmluZyBpbnNpZGUgY29udGFpbmVyPgogICAgICAgICAgICAtICczMzA2OjMzMDYnCiAgICAgICAgZXhwb3NlOgogICAgICAgICAgICAjIE9wZW5zIHBvcnQgMzMwNiBvbiB0aGUgY29udGFpbmVyCiAgICAgICAgICAgIC0gJzMzMDYnCg==",
+    "loadBalancing": null,
+    "localMySqlEnabled": null,
+    "logsDirectorySizeLimit": null,
+    "machineKey": null,
+    "managedPipelineMode": null,
+    "managedServiceIdentityId": null,
+    "metadata": null,
+    "minTlsCipherSuite": null,
+    "minTlsVersion": null,
+    "minimumElasticInstanceCount": 0,
+    "netFrameworkVersion": null,
+    "nodeVersion": null,
+    "numberOfWorkers": 1,
+    "phpVersion": null,
+    "powerShellVersion": null,
+    "preWarmedInstanceCount": null,
+    "publicNetworkAccess": null,
+    "publishingPassword": null,
+    "publishingUsername": null,
+    "push": null,
+    "pythonVersion": null,
+    "remoteDebuggingEnabled": null,
+    "remoteDebuggingVersion": null,
+    "requestTracingEnabled": null,
+    "requestTracingExpirationTime": null,
+    "routingRules": null,
+    "runtimeADUser": null,
+    "runtimeADUserPassword": null,
+    "scmIpSecurityRestrictions": [
+      {
+        "action": "Allow",
+        "description": "Allow all access",
+        "headers": null,
+        "ipAddress": "Any",
+        "name": "Allow all",
+        "priority": 2147483647,
+        "subnetMask": null,
+        "subnetTrafficTag": null,
+        "tag": null,
+        "vnetSubnetResourceId": null,
+        "vnetTrafficTag": null
+      }
+    ],
+    "scmIpSecurityRestrictionsDefaultAction": null,
+    "scmIpSecurityRestrictionsUseMain": null,
+    "scmMinTlsVersion": null,
+    "scmType": null,
+    "sitePort": null,
+    "storageType": null,
+    "supportedTlsCipherSuites": null,
+    "tracingOptions": null,
+    "use32BitWorkerProcess": null,
+    "virtualApplications": null,
+    "vnetName": null,
+    "vnetPrivatePortsCount": null,
+    "vnetRouteAllEnabled": null,
+    "webSocketsEnabled": null,
+    "websiteTimeZone": null,
+    "winAuthAdminState": null,
+    "winAuthTenantState": null,
+    "windowsConfiguredStacks": null,
+    "windowsFxVersion": null,
+    "xManagedServiceIdentityId": null
+  },
+  "slotSwapStatus": null,
+  "state": "Stopped",
+  "storageAccountRequired": false,
+  "suspendedTill": null,
+  "tags": null,
+  "targetSwapSlot": null,
+  "trafficManagerHostNames": null,
+  "type": "Microsoft.Web/sites",
+  "usageState": "Normal",
+  "virtualNetworkSubnetId": null,
+  "vnetContentShareEnabled": false,
+  "vnetImagePullEnabled": false,
+  "vnetRouteAllEnabled": false
+}
+val [ ~/classicmodels ]$ 
