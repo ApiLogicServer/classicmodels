@@ -1,36 +1,3 @@
-Requesting a Cloud Shell.Succeeded. 
-Connecting terminal...
-
-Welcome to Azure Cloud Shell
-
-Type "az" to use Azure CLI
-Type "help" to learn about Cloud Shell
-
-val [ ~ ]$ cd classicmodels
-val [ ~/classicmodels ]$ git pull
-remote: Enumerating objects: 14, done.
-remote: Counting objects: 100% (14/14), done.
-remote: Compressing objects: 100% (7/7), done.
-remote: Total 11 (delta 4), reused 11 (delta 4), pack-reused 0
-Unpacking objects: 100% (11/11), 11.75 KiB | 364.00 KiB/s, done.
-From https://github.com/ApiLogicServer/classicmodels
-   49a196a..21cccb3  main       -> origin/main
-Updating 49a196a..21cccb3
-Fast-forward
- devops/docker-compose-dev-azure/build-instructions.sh                                   |  49 ++++++++++
- .../docker-compose-dev.yml => docker-compose-dev-azure/docker-compose-dev-azure.yml}    |  60 +++++-------
- devops/docker-compose-dev-azure/log-from-compose.log                                    | 224 +++++++++++++++++++++++++++++++++++++++++++
- devops/{docker-compose-dev => docker-compose-dev-azure}/startup-failed.log              |   0
- devops/{docker-compose-dev => docker-compose-dev-local}/docker-compose-dev-local.yml    |  52 +++++-----
- devops/docker-compose-dev/docker-compose-dev-deploy.sh                                  |  30 ------
- logging.yml                                                                             |   2 +-
- 7 files changed, 319 insertions(+), 98 deletions(-)
- create mode 100644 devops/docker-compose-dev-azure/build-instructions.sh
- rename devops/{docker-compose-dev/docker-compose-dev.yml => docker-compose-dev-azure/docker-compose-dev-azure.yml} (66%)
- create mode 100644 devops/docker-compose-dev-azure/log-from-compose.log
- rename devops/{docker-compose-dev => docker-compose-dev-azure}/startup-failed.log (100%)
- rename devops/{docker-compose-dev => docker-compose-dev-local}/docker-compose-dev-local.yml (81%)
- delete mode 100644 devops/docker-compose-dev/docker-compose-dev-deploy.sh
 val [ ~/classicmodels ]$ az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure/docker-compose-dev-azure.yml
 Webapp 'classicmodels' already exists. The command will use the existing app's settings.
 {
@@ -91,7 +58,7 @@ Webapp 'classicmodels' already exists. The command will use the existing app's s
   "isXenon": false,
   "keyVaultReferenceIdentity": "SystemAssigned",
   "kind": "app,linux,container",
-  "lastModifiedTimeUtc": "2023-08-10T21:11:49.713333",
+  "lastModifiedTimeUtc": "2023-08-10T21:31:16.376666",
   "location": "West US",
   "maxNumberOfWorkers": null,
   "name": "classicmodels",
@@ -157,7 +124,7 @@ Webapp 'classicmodels' already exists. The command will use the existing app's s
     "javaVersion": null,
     "keyVaultReferenceIdentity": null,
     "limits": null,
-    "linuxFxVersion": "COMPOSE|dmVyc2lvbjogIjMuNSIKCiMgc2VlIC4vYnVpbGQtaW5zdHJ1Y3Rpb25zLnNoIGZvciBub3RlcyBvbiBob3cgdG8gcnVuCgpzZXJ2aWNlczoKCiAgICBteXNxbC1zZXJ2aWNlOgogICAgICAgIGltYWdlOiBhcGlsb2dpY3NlcnZlci9teXNxbDguMDpsYXRlc3QKICAgICAgICByZXN0YXJ0OiBhbHdheXMKICAgICAgICBlbnZpcm9ubWVudDoKICAgICAgICAgICAgIyBNWVNRTF9EQVRBQkFTRTogJ2RiJwogICAgICAgICAgICAjIFNvIHlvdSBkb24ndCBoYXZlIHRvIHVzZSByb290LCBidXQgeW91IGNhbiBpZiB5b3UgbGlrZQogICAgICAgICAgICAtIE1ZU1FMX1VTRVI9cm9vdAogICAgICAgICAgICAjIFlvdSBjYW4gdXNlIHdoYXRldmVyIHBhc3N3b3JkIHlvdSBsaWtlCiAgICAgICAgICAgIC0gTVlTUUxfUEFTU1dPUkQ9cAogICAgICAgICAgICAjIFBhc3N3b3JkIGZvciByb290IGFjY2VzcwogICAgICAgICAgICAtIE1ZU1FMX1JPT1RfUEFTU1dPUkQ9cAogICAgICAgIHBvcnRzOgogICAgICAgICAgICAjIDxQb3J0IGV4cG9zZWQ+IDogPE15U1FMIFBvcnQgcnVubmluZyBpbnNpZGUgY29udGFpbmVyPgogICAgICAgICAgICAtICczMzA2OjMzMDYnCiAgICAgICAgZXhwb3NlOgogICAgICAgICAgICAjIE9wZW5zIHBvcnQgMzMwNiBvbiB0aGUgY29udGFpbmVyCiAgICAgICAgICAgIC0gJzMzMDYnCgogICAgYXBpLWxvZ2ljLXNlcnZlcjoKICAgICAgICBpbWFnZTogYXBpbG9naWNzZXJ2ZXIvY2xhc3NpY21vZGVscwogICAgICAgIGVudmlyb25tZW50OgogICAgICAgICAgLSBBUElMT0dJQ1BST0pFQ1RfVkVSQk9TRT10cnVlCiAgICAgICAgICAtIFNFQ1VSSVRZX0VOQUJMRUQ9ZmFsc2UKICAgICAgICAgICMgLSBBUElMT0dJQ1BST0pFQ1RfSFRUUF9TQ0hFTUU9aHR0cHMKICAgICAgICAgIC0gUFlUSE9OUEFUSD0vYXBwL0FwaUxvZ2ljUHJvamVjdCAKICAgICAgICAgIC0gQVBJTE9HSUNQUk9KRUNUX1NRTEFMQ0hFTVlfREFUQUJBU0VfVVJJPW15c3FsK3B5bXlzcWw6Ly9yb290OnBAbXlzcWwtc2VydmljZTozMzA2L2NsYXNzaWNtb2RlbHMKICAgICAgICAgIC0gQVBJTE9HSUNQUk9KRUNUX1NRTEFMQ0hFTVlfREFUQUJBU0VfVVJJX0FVVEhFTlRJQ0FUSU9OPW15c3FsK3B5bXlzcWw6Ly9yb290OnBAbXlzcWwtc2VydmljZTozMzA2L2F1dGhkYgogICAgICAgIGV4cG9zZToKICAgICAgICAgICAgLSA1NjU2CiAgICAgICAgcG9ydHM6CiAgICAgICAgICAgIC0gNTY1Njo1NjU2CiAgICAgICAgdm9sdW1lczoKICAgICAgICAgICAgIyByZWxhdGl2ZSBwYXRoIC0gdGhhbmtzIGh0dHBzOi8vc3RhY2tvdmVyZmxvdy5jb20vcXVlc3Rpb25zLzQ2OTA3NTU4L2RvY2tlci1jb21wb3NlLXJlbGF0aXZlLXBhdGhzLXZzLWRvY2tlci12b2x1bWUKICAgICAgICAgICAgIyAtIC9Vc2Vycy92YWwvZGV2L0FwaUxvZ2ljU2VydmVyL0FwaUxvZ2ljU2VydmVyLWRldi9vcmdfZ2l0L2RvY2tlci1jb21wb3NlLW53LXBvc3RncmVzOi9hcHAKICAgICAgICAgICAgIyBidXQgb24gQXosIHVzZSBjbG91ZCBzdG9yYWdlCiAgICAgICAgICAgIC0gJHtXRUJBUFBfU1RPUkFHRV9IT01FfS9jbGFzc2ljbW9kZWxzOi9hcHAKICAgICAgICAjIGh0dHBzOi8vc3RhY2tvdmVyZmxvdy5jb20vcXVlc3Rpb25zLzM5NDYwODkyL2d1bmljb3JuLW5vLW1vZHVsZS1uYW1lZC1teXByb2plY3QKICAgICAgICAjIHdvcmtzLCBidXQgbm90IHJlcXVpcmVkIC0gY29tbWFuZDogcHl0aG9uIGFwaV9sb2dpY19zZXJ2ZXJfcnVuLnB5CiAgICAgICAgd29ya2luZ19kaXI6IC9ob21lL2FwaV9sb2dpY19wcm9qZWN0Cgo=",
+    "linuxFxVersion": "COMPOSE|dmVyc2lvbjogIjMuNSIKCiMgc2VlIC4vYnVpbGQtaW5zdHJ1Y3Rpb25zLnNoIGZvciBub3RlcyBvbiBob3cgdG8gcnVuCgpzZXJ2aWNlczoKCiAgICBteXNxbC1zZXJ2aWNlOgogICAgICAgIGltYWdlOiBhcGlsb2dpY3NlcnZlci9teXNxbDguMDpsYXRlc3QKICAgICAgICByZXN0YXJ0OiBhbHdheXMKICAgICAgICBlbnZpcm9ubWVudDoKICAgICAgICAgICAgIyBNWVNRTF9EQVRBQkFTRTogJ2RiJwogICAgICAgICAgICAjIFNvIHlvdSBkb24ndCBoYXZlIHRvIHVzZSByb290LCBidXQgeW91IGNhbiBpZiB5b3UgbGlrZQogICAgICAgICAgICAtIE1ZU1FMX1VTRVI9cm9vdAogICAgICAgICAgICAjIFlvdSBjYW4gdXNlIHdoYXRldmVyIHBhc3N3b3JkIHlvdSBsaWtlCiAgICAgICAgICAgIC0gTVlTUUxfUEFTU1dPUkQ9cAogICAgICAgICAgICAjIFBhc3N3b3JkIGZvciByb290IGFjY2VzcwogICAgICAgICAgICAtIE1ZU1FMX1JPT1RfUEFTU1dPUkQ9cAogICAgICAgIHBvcnRzOgogICAgICAgICAgICAjIDxQb3J0IGV4cG9zZWQ+IDogPE15U1FMIFBvcnQgcnVubmluZyBpbnNpZGUgY29udGFpbmVyPgogICAgICAgICAgICAtICczMzA2OjMzMDYnCiAgICAgICAgZXhwb3NlOgogICAgICAgICAgICAjIE9wZW5zIHBvcnQgMzMwNiBvbiB0aGUgY29udGFpbmVyCiAgICAgICAgICAgIC0gJzMzMDYnCgogICAgYXBpLWxvZ2ljLXNlcnZlcjoKICAgICAgICBpbWFnZTogYXBpbG9naWNzZXJ2ZXIvY2xhc3NpY21vZGVscwogICAgICAgIGVudmlyb25tZW50OgogICAgICAgICAgLSBBUElMT0dJQ1BST0pFQ1RfVkVSQk9TRT10cnVlCiAgICAgICAgICAtIFNFQ1VSSVRZX0VOQUJMRUQ9ZmFsc2UKICAgICAgICAgICMgLSBBUElMT0dJQ1BST0pFQ1RfSFRUUF9TQ0hFTUU9aHR0cHMKICAgICAgICAgIC0gUFlUSE9OUEFUSD0vYXBwL0FwaUxvZ2ljUHJvamVjdCAKICAgICAgICAgIC0gQVBJTE9HSUNQUk9KRUNUX1NRTEFMQ0hFTVlfREFUQUJBU0VfVVJJPW15c3FsK3B5bXlzcWw6Ly9yb290OnBAbXlzcWwtc2VydmljZTozMzA2L2NsYXNzaWNtb2RlbHMKICAgICAgICAgIC0gQVBJTE9HSUNQUk9KRUNUX1NRTEFMQ0hFTVlfREFUQUJBU0VfVVJJX0FVVEhFTlRJQ0FUSU9OPW15c3FsK3B5bXlzcWw6Ly9yb290OnBAbXlzcWwtc2VydmljZTozMzA2L2F1dGhkYgogICAgICAgIGV4cG9zZToKICAgICAgICAgICAgLSA1NjU2CiAgICAgICAgcG9ydHM6CiAgICAgICAgICAgIC0gNTY1Njo1NjU2CiAgICAgICAgdm9sdW1lczoKICAgICAgICAgICAgLSAke1dFQkFQUF9TVE9SQUdFX0hPTUV9L2NsYXNzaWNtb2RlbHM6L2FwcAogICAgICAgIHdvcmtpbmdfZGlyOiAvaG9tZS9hcGlfbG9naWNfcHJvamVjdAoK",
     "loadBalancing": null,
     "localMySqlEnabled": null,
     "logsDirectorySizeLimit": null,
@@ -223,7 +190,7 @@ Webapp 'classicmodels' already exists. The command will use the existing app's s
     "xManagedServiceIdentityId": null
   },
   "slotSwapStatus": null,
-  "state": "Stopped",
+  "state": "Running",
   "storageAccountRequired": false,
   "suspendedTill": null,
   "tags": null,
