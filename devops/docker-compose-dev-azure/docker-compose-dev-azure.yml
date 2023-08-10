@@ -37,6 +37,6 @@ services:
             - 5656:5656
         volumes:
             - ${WEBAPP_STORAGE_HOME}/classicmodels:/app
-        command:  bash /app/start.sh
+        command:  python app/api_logic_server_run.py
         working_dir: app
 
