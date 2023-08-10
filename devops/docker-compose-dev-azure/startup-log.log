@@ -6,6 +6,15 @@ Connecting...
 2023-08-10T20:04:41.586190079Z API Logic Server - Start Default App - redirect /admin-app/index.html
 2023-08-10T20:04:41.591233119Z 172.16.9.1 - - [10/Aug/2023 20:04:41] "[32mGET / HTTP/1.1[0m" 302 -
 /home/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log)
+2023-08-10T19:51:06.654Z INFO  - latest Pulling from apilogicserver/mysql8.0
+2023-08-10T19:51:06.656Z INFO  -  Digest: sha256:4388016819096f2b1b054d69261950433c11cff1464985166d90af06b288819a
+2023-08-10T19:51:06.657Z INFO  -  Status: Image is up to date for apilogicserver/mysql8.0:latest
+2023-08-10T19:51:06.662Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
+2023-08-10T19:51:06.701Z INFO  - Starting container for site
+2023-08-10T19:51:06.702Z INFO  - docker run -d  --name classicmodels_mysql-service_0_ad70ea68 -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/mysql8.0:latest
+2023-08-10T19:51:25.352Z INFO  - Started multi-container app
+2023-08-10T19:51:25.356Z INFO  - Initiating warmup request to container classicmodels_api-logic-server_0_ad70ea68 for site classicmodels
+2023-08-10T19:51:25.376Z INFO  - Container classicmodels_api-logic-server_0_ad70ea68 for site classicmodels initialized successfully and is ready to serve requests.
 /home/LogFiles/2023_08_10_lw0sdlwk00000G_mysql-service_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_mysql-service_docker.log)
 2023-08-10T19:51:17.872864366Z 2023-08-10T19:51:17.872688Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
 2023-08-10T19:51:22.471118426Z 2023-08-10T19:51:22.470828Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
@@ -18,36 +27,140 @@ Connecting...
 2023-08-10T19:51:24.403016380Z 2023-08-10T19:51:24.402847Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
 Ending Log Tail of existing logs ---
 Starting Live Log Stream ---
-2023-08-10T21:15:48.496Z INFO  - 6711ad33614c Extracting 9MB / 11MB
-2023-08-10T21:15:48.714Z INFO  - 6711ad33614c Extracting 10MB / 11MB
-2023-08-10T21:15:48.985Z INFO  - 6711ad33614c Extracting 11MB / 11MB
-2023-08-10T21:15:49.098Z INFO  - 6711ad33614c Pull complete
-2023-08-10T21:15:49.198Z INFO  -  Digest: sha256:a2f7cabb1fb90c1d0e3ddc2bbefeee35cdbacbb0f4af07f459e19103e913870f
-2023-08-10T21:15:49.207Z INFO  -  Status: Downloaded newer image for apilogicserver/classicmodels:latest
-2023-08-10T21:15:49.241Z INFO  - Pull Image successful, Time taken: 1 Minutes and 36 Seconds
-2023-08-10T21:15:49.307Z INFO  - Starting container for site
-2023-08-10T21:15:49.308Z INFO  - docker run -d  --name classicmodels_api-logic-server_0_9fa48822 -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/classicmodels
-/home/LogFiles/2023_08_10_lw0sdlwk00000G_mysql-service_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_mysql-service_docker.log)
-2023-08-10T19:51:17.872864366Z 2023-08-10T19:51:17.872688Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-2023-08-10T19:51:22.471118426Z 2023-08-10T19:51:22.470828Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-2023-08-10T19:51:23.731128860Z 2023-08-10T19:51:23.730732Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
-2023-08-10T19:51:23.839865294Z 2023-08-10T19:51:23.839595Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
-2023-08-10T19:51:23.976465043Z 2023-08-10T19:51:23.966858Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
-2023-08-10T19:51:24.275237348Z 2023-08-10T19:51:24.268429Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
-2023-08-10T19:51:24.284713095Z 2023-08-10T19:51:24.284365Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-2023-08-10T19:51:24.308049297Z 2023-08-10T19:51:24.307448Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
-2023-08-10T19:51:24.403016380Z 2023-08-10T19:51:24.402847Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
-Ending Log Tail of existing logs ---
-Starting Live Log Stream ---
-2023-08-10T21:15:48.496Z INFO  - 6711ad33614c Extracting 9MB / 11MB
-2023-08-10T21:15:48.714Z INFO  - 6711ad33614c Extracting 10MB / 11MB
-2023-08-10T21:15:48.985Z INFO  - 6711ad33614c Extracting 11MB / 11MB
-2023-08-10T21:15:49.098Z INFO  - 6711ad33614c Pull complete
-2023-08-10T21:15:49.198Z INFO  -  Digest: sha256:a2f7cabb1fb90c1d0e3ddc2bbefeee35cdbacbb0f4af07f459e19103e913870f
-2023-08-10T21:15:49.207Z INFO  -  Status: Downloaded newer image for apilogicserver/classicmodels:latest
-2023-08-10T21:15:49.241Z INFO  - Pull Image successful, Time taken: 1 Minutes and 36 Seconds
-2023-08-10T21:15:49.307Z INFO  - Starting container for site
-2023-08-10T21:15:49.308Z INFO  - docker run -d  --name classicmodels_api-logic-server_0_9fa48822 -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/classicmodels
+2023-08-10T21:13:07.375Z INFO  - Starting multi-container app..
+2023-08-10T21:13:10.749Z INFO  - latest Pulling from apilogicserver/mysql8.0
+2023-08-10T21:13:10.754Z INFO  - a076a628af6f Pulling fs layer
+2023-08-10T21:13:10.755Z INFO  - f6c208f3f991 Pulling fs layer
+2023-08-10T21:13:10.755Z INFO  - 88a9455a9165 Pulling fs layer
+2023-08-10T21:13:10.760Z INFO  - 406c9b8427c6 Pulling fs layer
+2023-08-10T21:13:10.761Z INFO  - 7c88599c0b25 Pulling fs layer
+2023-08-10T21:13:10.762Z INFO  - 25b5c6debdaf Pulling fs layer
+2023-08-10T21:13:10.762Z INFO  - 43a5816f1617 Pulling fs layer
+2023-08-10T21:13:10.763Z INFO  - 1a8c919e89bf Pulling fs layer
+2023-08-10T21:13:10.763Z INFO  - 9f3cf4bd1a07 Pulling fs layer
+2023-08-10T21:13:10.770Z INFO  - 80539cea118d Pulling fs layer
+2023-08-10T21:13:10.770Z INFO  - 201b3cad54ce Pulling fs layer
+2023-08-10T21:13:10.771Z INFO  - 944ba37e1c06 Pulling fs layer
+2023-08-10T21:13:10.771Z INFO  - 849b9a1147cf Pulling fs layer
+2023-08-10T21:13:10.772Z INFO  - 0f24d73967b2 Pulling fs layer
+2023-08-10T21:13:10.772Z INFO  - ce4a6655b1dd Pulling fs layer
+2023-08-10T21:13:10.773Z INFO  - 0f82fcad4ae1 Pulling fs layer
+2023-08-10T21:13:11.156Z INFO  - 7c88599c0b25 Downloading 115B / 115B
+2023-08-10T21:13:11.157Z INFO  - 849b9a1147cf Downloading 191B / 191B
+2023-08-10T21:13:11.158Z INFO  - 7c88599c0b25 Verifying Checksum
+2023-08-10T21:13:11.158Z INFO  - 7c88599c0b25 Download complete
+2023-08-10T21:13:11.176Z INFO  - 849b9a1147cf Verifying Checksum
+2023-08-10T21:13:11.183Z INFO  - 849b9a1147cf Download complete
+2023-08-10T21:13:11.295Z INFO  - 944ba37e1c06 Downloading 120B / 120B
+2023-08-10T21:13:11.349Z INFO  - a076a628af6f Downloading 1MB / 25MB
+2023-08-10T21:13:11.350Z INFO  - f6c208f3f991 Downloading 1KB / 1KB
+2023-08-10T21:13:11.377Z INFO  - 944ba37e1c06 Verifying Checksum
+2023-08-10T21:13:11.394Z INFO  - 944ba37e1c06 Download complete
+2023-08-10T21:13:11.395Z INFO  - f6c208f3f991 Verifying Checksum
+2023-08-10T21:13:11.395Z INFO  - f6c208f3f991 Download complete
+2023-08-10T21:13:11.413Z INFO  - 25b5c6debdaf Downloading 555KB / 12MB
+2023-08-10T21:13:11.434Z INFO  - 201b3cad54ce Downloading 759B / 5KB
+2023-08-10T21:13:11.454Z INFO  - 1a8c919e89bf Downloading 225B / 225B
+2023-08-10T21:13:11.474Z INFO  - 80539cea118d Downloading 845B / 845B
+2023-08-10T21:13:11.499Z INFO  - 43a5816f1617 Downloading 2KB / 2KB
+2023-08-10T21:13:11.500Z INFO  - 201b3cad54ce Downloading 5KB / 5KB
+2023-08-10T21:13:11.501Z INFO  - 1a8c919e89bf Verifying Checksum
+2023-08-10T21:13:11.501Z INFO  - 1a8c919e89bf Download complete
+2023-08-10T21:13:11.502Z INFO  - 80539cea118d Verifying Checksum
+2023-08-10T21:13:11.508Z INFO  - 80539cea118d Download complete
+2023-08-10T21:13:11.510Z INFO  - 43a5816f1617 Verifying Checksum
+2023-08-10T21:13:11.511Z INFO  - 43a5816f1617 Download complete
+2023-08-10T21:13:11.518Z INFO  - 201b3cad54ce Verifying Checksum
+2023-08-10T21:13:11.519Z INFO  - 201b3cad54ce Download complete
+2023-08-10T21:13:11.540Z INFO  - 25b5c6debdaf Downloading 1MB / 12MB
+2023-08-10T21:13:11.594Z INFO  - 88a9455a9165 Downloading 1MB / 3MB
+2023-08-10T21:13:11.648Z INFO  - 406c9b8427c6 Downloading 92KB / 1MB
+2023-08-10T21:13:11.847Z INFO  - 25b5c6debdaf Downloading 1MB / 12MB
+2023-08-10T21:13:11.855Z INFO  - a076a628af6f Downloading 2MB / 25MB
+2023-08-10T21:13:11.872Z INFO  - 0f82fcad4ae1 Downloading 1MB / 17MB
+2023-08-10T21:13:11.995Z INFO  - 9f3cf4bd1a07 Downloading 524KB / 107MB
+2023-08-10T21:13:11.997Z INFO  - 88a9455a9165 Downloading 2MB / 3MB
+2023-08-10T21:13:12.004Z INFO  - ce4a6655b1dd Downloading 766KB / 36MB
+2023-08-10T21:13:12.005Z INFO  - 0f24d73967b2 Downloading 764KB / 11MB
+2023-08-10T21:13:12.227Z INFO  - 406c9b8427c6 Downloading 400KB / 1MB
+2023-08-10T21:13:12.228Z INFO  - a076a628af6f Downloading 2MB / 25MB
+2023-08-10T21:13:12.229Z INFO  - 25b5c6debdaf Downloading 2MB / 12MB
+2023-08-10T21:13:12.229Z INFO  - 406c9b8427c6 Verifying Checksum
+2023-08-10T21:13:12.231Z INFO  - 406c9b8427c6 Download complete
+2023-08-10T21:13:12.231Z INFO  - 9f3cf4bd1a07 Downloading 1MB / 107MB
+2023-08-10T21:13:12.249Z INFO  - 0f82fcad4ae1 Downloading 3MB / 17MB
+2023-08-10T21:13:12.275Z INFO  - ce4a6655b1dd Downloading 1MB / 36MB
+2023-08-10T21:13:12.276Z INFO  - 0f82fcad4ae1 Downloading 3MB / 17MB
+2023-08-10T21:13:12.277Z INFO  - 88a9455a9165 Downloading 2MB / 3MB
+2023-08-10T21:13:12.293Z INFO  - a076a628af6f Downloading 3MB / 25MB
+2023-08-10T21:13:12.294Z INFO  - 25b5c6debdaf Downloading 2MB / 12MB
+2023-08-10T21:13:12.295Z INFO  - 0f24d73967b2 Downloading 1MB / 11MB
+2023-08-10T21:13:12.296Z INFO  - 25b5c6debdaf Downloading 3MB / 12MB
+2023-08-10T21:13:12.721Z INFO  - ce4a6655b1dd Downloading 2MB / 36MB
+2023-08-10T21:13:12.722Z INFO  - 88a9455a9165 Downloading 3MB / 3MB
+2023-08-10T21:13:12.739Z INFO  - a076a628af6f Downloading 3MB / 25MB
+2023-08-10T21:13:12.739Z INFO  - 9f3cf4bd1a07 Downloading 2MB / 107MB
+2023-08-10T21:13:12.740Z INFO  - 0f82fcad4ae1 Downloading 5MB / 17MB
+2023-08-10T21:13:12.741Z INFO  - 25b5c6debdaf Downloading 4MB / 12MB
+2023-08-10T21:13:12.769Z INFO  - a076a628af6f Downloading 4MB / 25MB
+2023-08-10T21:13:12.770Z INFO  - 25b5c6debdaf Downloading 4MB / 12MB
+2023-08-10T21:13:12.777Z INFO  - 0f24d73967b2 Downloading 3MB / 11MB
+2023-08-10T21:13:12.786Z INFO  - 88a9455a9165 Verifying Checksum
+2023-08-10T21:13:12.787Z INFO  - 88a9455a9165 Download complete
+2023-08-10T21:13:12.901Z INFO  - ce4a6655b1dd Downloading 4MB / 36MB
+2023-08-10T21:13:12.903Z INFO  - 9f3cf4bd1a07 Downloading 4MB / 107MB
+2023-08-10T21:13:12.906Z INFO  - 0f82fcad4ae1 Downloading 6MB / 17MB
+2023-08-10T21:13:13.020Z INFO  - a076a628af6f Downloading 6MB / 25MB
+2023-08-10T21:13:13.030Z INFO  - 9f3cf4bd1a07 Downloading 5MB / 107MB
+2023-08-10T21:13:13.058Z INFO  - 0f82fcad4ae1 Downloading 7MB / 17MB
+2023-08-10T21:13:13.158Z INFO  - 25b5c6debdaf Downloading 6MB / 12MB
+2023-08-10T21:13:13.276Z INFO  - a076a628af6f Downloading 6MB / 25MB
+2023-08-10T21:13:13.283Z INFO  - ce4a6655b1dd Downloading 6MB / 36MB
+2023-08-10T21:13:13.293Z INFO  - 25b5c6debdaf Downloading 7MB / 12MB
+2023-08-10T21:13:13.404Z INFO  - a076a628af6f Downloading 7MB / 25MB
+2023-08-10T21:13:13.414Z INFO  - 0f82fcad4ae1 Downloading 9MB / 17MB
+2023-08-10T21:13:13.422Z INFO  - 25b5c6debdaf Downloading 9MB / 12MB
+2023-08-10T21:13:13.423Z INFO  - ce4a6655b1dd Downloading 7MB / 36MB
+2023-08-10T21:13:13.432Z INFO  - ce4a6655b1dd Downloading 8MB / 36MB
+2023-08-10T21:13:13.586Z INFO  - 0f82fcad4ae1 Downloading 9MB / 17MB
+2023-08-10T21:13:13.592Z INFO  - a076a628af6f Downloading 9MB / 25MB
+2023-08-10T21:13:13.641Z INFO  - 9f3cf4bd1a07 Downloading 8MB / 107MB
+2023-08-10T21:13:13.642Z INFO  - ce4a6655b1dd Downloading 8MB / 36MB
+2023-08-10T21:13:13.723Z INFO  - 0f24d73967b2 Downloading 9MB / 11MB
+2023-08-10T21:13:13.724Z INFO  - 9f3cf4bd1a07 Downloading 9MB / 107MB
+2023-08-10T21:13:13.816Z INFO  - 0f82fcad4ae1 Downloading 11MB / 17MB
+2023-08-10T21:13:13.817Z INFO  - 25b5c6debdaf Downloading 12MB / 12MB
+2023-08-10T21:13:13.817Z INFO  - 0f24d73967b2 Downloading 11MB / 11MB
+2023-08-10T21:13:13.825Z INFO  - 25b5c6debdaf Verifying Checksum
+2023-08-10T21:13:13.826Z INFO  - 25b5c6debdaf Download complete
+2023-08-10T21:13:13.882Z INFO  - 0f82fcad4ae1 Downloading 12MB / 17MB
+2023-08-10T21:13:13.928Z INFO  - ce4a6655b1dd Downloading 11MB / 36MB
+2023-08-10T21:13:13.929Z INFO  - 0f24d73967b2 Verifying Checksum
+2023-08-10T21:13:13.929Z INFO  - 0f24d73967b2 Download complete
+2023-08-10T21:13:13.948Z INFO  - 0f82fcad4ae1 Downloading 12MB / 17MB
+2023-08-10T21:13:14.057Z INFO  - ce4a6655b1dd Downloading 12MB / 36MB
+2023-08-10T21:13:14.104Z INFO  - 0f82fcad4ae1 Downloading 13MB / 17MB
+2023-08-10T21:13:14.250Z INFO  - 0f82fcad4ae1 Downloading 15MB / 17MB
+2023-08-10T21:13:14.297Z INFO  - 0f82fcad4ae1 Verifying Checksum
+2023-08-10T21:13:14.304Z INFO  - 0f82fcad4ae1 Download complete
+2023-08-10T21:13:14.393Z INFO  - 9f3cf4bd1a07 Downloading 17MB / 107MB
+2023-08-10T21:13:14.472Z INFO  - ce4a6655b1dd Downloading 17MB / 36MB
+2023-08-10T21:13:14.529Z INFO  - 9f3cf4bd1a07 Downloading 19MB / 107MB
+2023-08-10T21:13:14.741Z INFO  - a076a628af6f Downloading 23MB / 25MB
+2023-08-10T21:13:14.795Z INFO  - ce4a6655b1dd Downloading 21MB / 36MB
+2023-08-10T21:13:14.843Z INFO  - a076a628af6f Verifying Checksum
+2023-08-10T21:13:14.849Z INFO  - a076a628af6f Download complete
+2023-08-10T21:13:14.881Z INFO  - ce4a6655b1dd Downloading 23MB / 36MB
+2023-08-10T21:13:15.016Z INFO  - ce4a6655b1dd Downloading 25MB / 36MB
+2023-08-10T21:13:15.117Z INFO  - ce4a6655b1dd Downloading 26MB / 36MB
+2023-08-10T21:13:15.283Z INFO  - 9f3cf4bd1a07 Downloading 30MB / 107MB
+2023-08-10T21:13:15.348Z INFO  - ce4a6655b1dd Downloading 29MB / 36MB
+2023-08-10T21:13:15.503Z INFO  - ce4a6655b1dd Downloading 32MB / 36MB
+2023-08-10T21:13:15.505Z INFO  - 9f3cf4bd1a07 Downloading 33MB / 107MB
+2023-08-10T21:13:15.704Z INFO  - ce4a6655b1dd Verifying Checksum
+2023-08-10T21:13:15.721Z INFO  - ce4a6655b1dd Download complete
+2023-08-10T21:13:15.752Z INFO  - a076a628af6f Extracting 576KB / 25MB
+2023-08-10T21:13:15.771Z INFO  - 9f3cf4bd1a07 Downloading 38MB / 107MB
 2023-08-10T21:13:15.889Z INFO  - 9f3cf4bd1a07 Downloading 42MB / 107MB
 2023-08-10T21:13:16.006Z INFO  - 9f3cf4bd1a07 Downloading 45MB / 107MB
 2023-08-10T21:13:16.089Z INFO  - a076a628af6f Extracting 1MB / 25MB
@@ -61,24 +174,6 @@ Starting Live Log Stream ---
 2023-08-10T21:13:17.202Z INFO  - 9f3cf4bd1a07 Downloading 75MB / 107MB
 2023-08-10T21:13:17.354Z INFO  - a076a628af6f Extracting 3MB / 25MB
 2023-08-10T21:13:17.540Z INFO  - a076a628af6f Extracting 4MB / 25MB
-2023-08-10T21:15:48.496Z INFO  - 6711ad33614c Extracting 9MB / 11MB
-2023-08-10T21:15:48.714Z INFO  - 6711ad33614c Extracting 10MB / 11MB
-2023-08-10T21:15:48.985Z INFO  - 6711ad33614c Extracting 11MB / 11MB
-2023-08-10T21:15:49.098Z INFO  - 6711ad33614c Pull complete
-2023-08-10T21:15:49.198Z INFO  -  Digest: sha256:a2f7cabb1fb90c1d0e3ddc2bbefeee35cdbacbb0f4af07f459e19103e913870f
-2023-08-10T21:15:49.207Z INFO  -  Status: Downloaded newer image for apilogicserver/classicmodels:latest
-2023-08-10T21:15:49.241Z INFO  - Pull Image successful, Time taken: 1 Minutes and 36 Seconds
-2023-08-10T21:15:49.307Z INFO  - Starting container for site
-2023-08-10T21:15:49.308Z INFO  - docker run -d  --name classicmodels_api-logic-server_0_9fa48822 -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/classicmodels
-2023-08-10T21:15:48.496Z INFO  - 6711ad33614c Extracting 9MB / 11MB
-2023-08-10T21:15:48.714Z INFO  - 6711ad33614c Extracting 10MB / 11MB
-2023-08-10T21:15:48.985Z INFO  - 6711ad33614c Extracting 11MB / 11MB
-2023-08-10T21:15:49.098Z INFO  - 6711ad33614c Pull complete
-2023-08-10T21:15:49.198Z INFO  -  Digest: sha256:a2f7cabb1fb90c1d0e3ddc2bbefeee35cdbacbb0f4af07f459e19103e913870f
-2023-08-10T21:15:49.207Z INFO  -  Status: Downloaded newer image for apilogicserver/classicmodels:latest
-2023-08-10T21:15:49.241Z INFO  - Pull Image successful, Time taken: 1 Minutes and 36 Seconds
-2023-08-10T21:15:49.307Z INFO  - Starting container for site
-2023-08-10T21:15:49.308Z INFO  - docker run -d  --name classicmodels_api-logic-server_0_9fa48822 -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/classicmodels
 2023-08-10T21:13:17.986Z INFO  - a076a628af6f Extracting 5MB / 25MB
 2023-08-10T21:13:18.316Z INFO  - 9f3cf4bd1a07 Downloading 104MB / 107MB
 2023-08-10T21:13:18.379Z INFO  - a076a628af6f Extracting 5MB / 25MB
@@ -834,173 +929,3 @@ Starting Log Tail -n 10 of existing logs ----
 2023-08-10T19:51:24.403016380Z 2023-08-10T19:51:24.402847Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
 Ending Log Tail of existing logs ---
 Starting Live Log Stream ---
-2023-08-10T21:19:40.243Z ERROR - multi-container unit was not started successfully
-2023-08-10T21:19:40.290Z INFO  - Container logs from classicmodels_mysql-service_0_9fa48822 = 2023-08-10T21:15:52.629911232Z 2023-08-10 21:15:52+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
-2023-08-10T21:15:54.000847650Z 2023-08-10 21:15:53+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
-2023-08-10T21:15:54.083266077Z 2023-08-10 21:15:54+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
-2023-08-10T21:15:56.231988452Z 2023-08-10T21:15:56.125984Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.23) starting as process 1
-2023-08-10T21:15:56.251986305Z 2023-08-10T21:15:56.251805Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
-2023-08-10T21:16:01.844887844Z 2023-08-10T21:16:01.844559Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
-2023-08-10T21:16:03.439697623Z 2023-08-10T21:16:03.439432Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
-2023-08-10T21:16:03.569995157Z 2023-08-10T21:16:03.569649Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
-2023-08-10T21:16:03.724145414Z 2023-08-10T21:16:03.723665Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
-2023-08-10T21:16:04.025156684Z 2023-08-10T21:16:04.024780Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
-2023-08-10T21:16:04.032119312Z 2023-08-10T21:16:04.025326Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-2023-08-10T21:16:04.044684504Z 2023-08-10T21:16:04.044159Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
-2023-08-10T21:16:04.139411063Z 2023-08-10T21:16:04.139260Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
-2023-08-10T21:19:44.897Z INFO  - Container logs from classicmodels_api-logic-server_0_9fa48822 = 2023-08-10T21:16:02.979829874Z
-2023-08-10T21:16:02.979883676Z API Logic Project (api_logic_project) Starting with CLI args:
-2023-08-10T21:16:02.979891877Z .. ./api_logic_server_run.py
-2023-08-10T21:16:02.979897577Z
-2023-08-10T21:16:02.979902877Z Created August 08, 2023 13:27:28 at /home/api_logic_project
-2023-08-10T21:16:02.979907978Z
-2023-08-10T21:16:03.037131171Z
-2023-08-10T21:16:03.037187274Z ENV args:
-2023-08-10T21:16:03.037195774Z .. flask_host: 0.0.0.0, port: 5656,
-2023-08-10T21:16:03.037201775Z .. swagger_host: localhost, swagger_port: 5656,
-2023-08-10T21:16:03.037207275Z .. client_uri: None,
-2023-08-10T21:16:03.037212475Z .. http_scheme: http, api_prefix: /api,
-2023-08-10T21:16:03.037217675Z .. | verbose: True, create_and_run: False
-2023-08-10T21:16:03.037222776Z
-2023-08-10T21:16:03.037227776Z
-2023-08-10T21:16:03.436782086Z Data Model Loaded, customizing...
-2023-08-10T21:16:03.458350901Z
-2023-08-10T21:16:03.464648498Z Logic Bank 01.08.04 - 1 rules loaded
-2023-08-10T21:16:03.473852031Z Declare   Logic complete - logic/declare_logic.py (rules + code) -- 16 tables loaded
-2023-08-10T21:16:03.473908633Z
-2023-08-10T21:16:07.386216563Z Declare   API - api/expose_api_models, endpoint for each table on localhost:5656, customizing...
-2023-08-10T21:16:08.500262700Z
-2023-08-10T21:16:08.500305402Z API Logic Project loaded (not WSGI), version 09.02.03
-2023-08-10T21:16:08.500312902Z  (running from docker container at flask_host: 0.0.0.0 - may require refresh)
-2023-08-10T21:16:08.500319002Z
-2023-08-10T21:16:08.506254183Z API Logic Project (name: api_logic_project) starting:
-2023-08-10T21:16:08.506291585Z ..Explore data and API at http_scheme://swagger_host:port http://localhost:5656
-2023-08-10T21:16:08.506300185Z .... with flask_host: 0.0.0.0
-2023-08-10T21:16:08.506306585Z .... and  swagger_port: 5656
-2023-08-10T21:16:08.515894638Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
-2023-08-10T21:16:08.515928940Z  * Running on all addresses (0.0.0.0)
-2023-08-10T21:16:08.515936340Z  * Running on http://127.0.0.1:5656
-2023-08-10T21:16:08.515942241Z  * Running on http://172.16.10.3:5656
-2023-08-10T21:16:08.515947841Z [33mPress CTRL+C to quit[0m
-2023-08-10T21:16:08.516013044Z
-2023-08-10T21:16:08.516019444Z
-2023-08-10T21:16:08.516024745Z sys_info here
-2023-08-10T21:16:08.516030345Z
-2023-08-10T21:16:08.516035645Z Environment Variables...
-2023-08-10T21:16:08.516041045Z .. PATH = /usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-2023-08-10T21:16:08.516064346Z .. HOSTNAME = 69ce07adaa24
-2023-08-10T21:16:08.516069947Z .. COMPUTERNAME = lw0sdlwk00000G
-2023-08-10T21:16:08.516075147Z .. PLATFORM_VERSION = 100.0.7.518
-2023-08-10T21:16:08.516080347Z .. APPSVC_RUN_ZIP = FALSE
-2023-08-10T21:16:08.516085547Z .. WEBSITE_SKU = Standard
-2023-08-10T21:16:08.516090748Z .. WEBSITE_ISOLATION = lxc
-2023-08-10T21:16:08.516095948Z .. REGION_NAME = westus
-2023-08-10T21:16:08.516101148Z .. DIAGNOSTIC_LOGS_MOUNT_PATH = /var/log/diagnosticLogs
-2023-08-10T21:16:08.516106348Z .. USE_DIAG_SERVER = true
-2023-08-10T21:16:08.516111749Z .. WEBSITE_OWNER_NAME = 7cbce59a-9dd7-4133-9534-62bd6d8b299e+myResourceGroup-WestUSwebspace-Linux
-2023-08-10T21:16:08.516117149Z .. WEBSITE_RESOURCE_GROUP = myresourcegroup
-2023-08-10T21:16:08.516122349Z .. WEBSITE_HTTPLOGGING_RETENTION_DAYS = 4
-2023-08-10T21:16:08.516127549Z .. APPSETTING_WEBSITE_HTTPLOGGING_RETENTION_DAYS = 4
-2023-08-10T21:16:08.516132850Z .. ScmType = None
-2023-08-10T21:16:08.516138050Z .. APPSETTING_ScmType = None
-2023-08-10T21:16:08.516143250Z .. WEBSITE_SITE_NAME = classicmodels
-2023-08-10T21:16:08.516148450Z .. APPSETTING_WEBSITE_SITE_NAME = classicmodels
-2023-08-10T21:16:08.516153651Z .. WEBSITE_AUTH_ENABLED = False
-2023-08-10T21:16:08.516159251Z .. APPSETTING_WEBSITE_AUTH_ENABLED = False
-2023-08-10T21:16:08.516164451Z .. APILOGICPROJECT_VERBOSE = true
-2023-08-10T21:16:08.516169751Z .. SECURITY_ENABLED = false
-2023-08-10T21:16:08.516174952Z .. PYTHONPATH = /app/ApiLogicProject
-2023-08-10T21:16:08.516180152Z .. APILOGICPROJECT_SQLALCHEMY_DATABASE_URI = mysql+pymysql://root:p@mysql-service:3306/classicmodels
-2023-08-10T21:16:08.516185552Z .. APILOGICPROJECT_SQLALCHEMY_DATABASE_URI_AUTHENTICATION = mysql+pymysql://root:p@mysql-service:3306/authdb
-2023-08-10T21:16:08.516190952Z .. WEBSITE_AUTH_ENCRYPTION_KEY = 126B511F172974FDBAA48DE2D218A1EC0F8461FEA16C75905E9041686A5C5D8F
-2023-08-10T21:16:08.516196253Z .. WEBSITE_AUTH_SIGNING_KEY = 15D875D89C94D6590A1EC449FEC5618309B1E097A956BDA91CC40D7227770498
-2023-08-10T21:16:08.516201653Z .. WEBSITE_ROLE_INSTANCE_ID = 0
-2023-08-10T21:16:08.516206853Z .. WEBSITE_HOSTNAME = classicmodels.azurewebsites.net
-2023-08-10T21:16:08.516212153Z .. WEBSITE_HOME_STAMPNAME = waws-prod-bay-249
-2023-08-10T21:16:08.516217354Z .. DOCKER_SERVER_VERSION = 19.03.15+azure
-2023-08-10T21:16:08.516222654Z .. NUM_CORES = 1
-2023-08-10T21:16:08.516227754Z .. WEBSITE_INSTANCE_ID = 0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4
-2023-08-10T21:16:08.516233154Z .. HTTP_LOGGING_ENABLED = 1
-2023-08-10T21:16:08.516238355Z .. WEBSITE_USE_DIAGNOSTIC_SERVER = False
-2023-08-10T21:16:08.516243555Z .. LANG = C.UTF-8
-2023-08-10T21:16:08.516253955Z .. GPG_KEY = A035C8C19219BA821ECEA86B64E628F8D684696D
-2023-08-10T21:16:08.516259256Z .. PYTHON_VERSION = 3.11.4
-2023-08-10T21:16:08.516264456Z .. PYTHON_PIP_VERSION = 23.1.2
-2023-08-10T21:16:08.516269656Z .. PYTHON_SETUPTOOLS_VERSION = 65.5.1
-2023-08-10T21:16:08.516279457Z .. PYTHON_GET_PIP_URL = https://github.com/pypa/get-pip/raw/0d8570dc44796f4369b652222cf176b3db6ac70e/public/get-pip.py
-2023-08-10T21:16:08.516285757Z .. PYTHON_GET_PIP_SHA256 = 96461deced5c2a487ddc65207ec5a9cffeca0d34e7af7ea1afc470ff0d746207
-2023-08-10T21:16:08.516291157Z .. APILOGICSERVER_RUNNING = DOCKER
-2023-08-10T21:16:08.516296357Z .. APILOGICSERVER_FROM = python:3.11.4-slim-bullseye
-2023-08-10T21:16:08.516301458Z .. HOME = /home/api_logic_server
-2023-08-10T21:16:08.516306558Z .. SECRET_KEY = whatnothow
-2023-08-10T21:16:08.516311758Z .. SQLALCHEMY_TRACK_MODIFICATIONS = False
-2023-08-10T21:16:08.516316958Z .. SQLAlCHEMY_ECHO = false
-2023-08-10T21:16:08.516322159Z
-2023-08-10T21:16:08.516327359Z
-2023-08-10T21:16:08.516332359Z flask_app.config:
-2023-08-10T21:16:08.516337559Z
-2023-08-10T21:16:08.516342660Z <Config {'DEBUG': None,
-2023-08-10T21:16:08.516347860Z 	'TESTING': False,
-2023-08-10T21:16:08.516353060Z 	'PROPAGATE_EXCEPTIONS': False,
-2023-08-10T21:16:08.516358360Z 	'SECRET_KEY': 'whatnothow',
-2023-08-10T21:16:08.516363661Z 	'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31),
-2023-08-10T21:16:08.516368861Z 	'USE_X_SENDFILE': False,
-2023-08-10T21:16:08.516373961Z 	'SERVER_NAME': None,
-2023-08-10T21:16:08.516379161Z 	'APPLICATION_ROOT': '/',
-2023-08-10T21:16:08.516384262Z 	'SESSION_COOKIE_NAME': 'session',
-2023-08-10T21:16:08.516389562Z 	'SESSION_COOKIE_DOMAIN': None,
-2023-08-10T21:16:08.516394662Z 	'SESSION_COOKIE_PATH': None,
-2023-08-10T21:16:08.516399862Z 	'SESSION_COOKIE_HTTPONLY': True,
-2023-08-10T21:16:08.516404963Z 	'SESSION_COOKIE_SECURE': False,
-2023-08-10T21:16:08.516410163Z 	'SESSION_COOKIE_SAMESITE': None,
-2023-08-10T21:16:08.516415363Z 	'SESSION_REFRESH_EACH_REQUEST': True,
-2023-08-10T21:16:08.516420563Z 	'MAX_CONTENT_LENGTH': None,
-2023-08-10T21:16:08.516425663Z 	'SEND_FILE_MAX_AGE_DEFAULT': None,
-2023-08-10T21:16:08.516430864Z 	'TRAP_BAD_REQUEST_ERRORS': None,
-2023-08-10T21:16:08.516436064Z 	'TRAP_HTTP_EXCEPTIONS': False,
-2023-08-10T21:16:08.516441264Z 	'EXPLAIN_TEMPLATE_LOADING': False,
-2023-08-10T21:16:08.516446464Z 	'PREFERRED_URL_SCHEME': 'http',
-2023-08-10T21:16:08.516451565Z 	'TEMPLATES_AUTO_RELOAD': None,
-2023-08-10T21:16:08.516456965Z 	'MAX_COOKIE_SIZE': 4093,
-2023-08-10T21:16:08.516467165Z 	'API_PREFIX': '/api',
-2023-08-10T21:16:08.516472366Z 	'FLASK_HOST': '0.0.0.0',
-2023-08-10T21:16:08.516477466Z 	'SWAGGER_HOST': 'localhost',
-2023-08-10T21:16:08.516482766Z 	'PORT': '5656',
-2023-08-10T21:16:08.516487866Z 	'SWAGGER_PORT': '5656',
-2023-08-10T21:16:08.516492967Z 	'HTTP_SCHEME': 'http',
-2023-08-10T21:16:08.516498167Z 	'VERBOSE': True,
-2023-08-10T21:16:08.516503467Z 	'CREATE_AND_RUN': False,
-2023-08-10T21:16:08.516508667Z 	'CREATED_API_PREFIX': '/api',
-2023-08-10T21:16:08.516515968Z 	'CREATED_FLASK_HOST': '0.0.0.0',
-2023-08-10T21:16:08.516521168Z 	'CREATED_HTTP_SCHEME': 'http',
-2023-08-10T21:16:08.516526368Z 	'CREATED_PORT': '5656',
-2023-08-10T21:16:08.516531869Z 	'CREATED_SWAGGER_HOST': 'localhost',
-2023-08-10T21:16:08.516537069Z 	'CREATED_SWAGGER_PORT': '5656',
-2023-08-10T21:16:08.516542169Z 	'FLASK_APP': None,
-2023-08-10T21:16:08.516547369Z 	'FLASK_ENV': None,
-2023-08-10T21:16:08.516552569Z 	'OPT_LOCKING': 'optional',
-2023-08-10T21:16:08.516557570Z 	'SECURITY_ENABLED': False,
-2023-08-10T21:16:08.516562770Z 	'SECURITY_PROVIDER': None,
-2023-08-10T21:16:08.516567970Z 	'SQLALCHEMY_DATABASE_URI': 'mysql+pymysql://root:p@mysql-service:3306/classicmodels',
-2023-08-10T21:16:08.516573470Z 	'SQLALCHEMY_DATABASE_URI_AUTHENTICATION': 'mysql+pymysql://root:p@mysql-service:3306/authdb',
-2023-08-10T21:16:08.516578771Z 	'SQLALCHEMY_TRACK_MODIFICATIONS': False}>
-2023-08-10T21:16:08.516584171Z
-2023-08-10T21:16:08.516589271Z
-2023-08-10T21:16:08.516594371Z PYTHONPATH..
-2023-08-10T21:16:08.516599472Z ../home/api_logic_project
-2023-08-10T21:16:08.516604572Z ../app/ApiLogicProject
-2023-08-10T21:16:08.516609772Z ../usr/local/lib/python311.zip
-2023-08-10T21:16:08.516614872Z ../usr/local/lib/python3.11
-2023-08-10T21:16:08.516620073Z ../usr/local/lib/python3.11/lib-dynload
-2023-08-10T21:16:08.516625273Z ../usr/local/lib/python3.11/site-packages
-2023-08-10T21:16:08.516630573Z ../home/api_logic_project
-2023-08-10T21:16:08.516635773Z ../home/api_logic_server
-2023-08-10T21:16:08.516640874Z
-2023-08-10T21:16:08.516645974Z sys.prefix (venv): /usr/local
-2023-08-10T21:16:08.516651174Z
-2023-08-10T21:16:08.516656374Z
-2023-08-10T21:16:08.516661775Z hostname=69ce07adaa24 on local_ip=172.16.0.3
-2023-08-10T21:16:08.516666975Z
-2023-08-10T21:16:08.516671975Z
-2023-08-10T21:16:08.516677175Z  * Serving Flask app 'API Logic Server'
-2023-08-10T21:19:50.953Z INFO  - Stopping site classicmodels because it failed during startup.

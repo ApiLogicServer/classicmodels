@@ -36,11 +36,6 @@ services:
         ports:
             - 5656:5656
         volumes:
-            # relative path - thanks https://stackoverflow.com/questions/46907558/docker-compose-relative-paths-vs-docker-volume
-            # - /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/org_git/docker-compose-nw-postgres:/app
-            # but on Az, use cloud storage
             - ${WEBAPP_STORAGE_HOME}/classicmodels:/app
-        # https://stackoverflow.com/questions/39460892/gunicorn-no-module-named-myproject
-        # works, but not required - command: python api_logic_server_run.py
         working_dir: /home/api_logic_project
 
