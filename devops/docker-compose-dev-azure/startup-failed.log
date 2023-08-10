@@ -1,11 +1,13 @@
 Connecting...
-2023-08-10T21:37:43  Welcome, you are now connected to log-streaming service.
+2023-08-10T22:03:52  Welcome, you are now connected to log-streaming service.
 Starting Log Tail -n 10 of existing logs ----
-/home/LogFiles/__lastCheckTime.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)08/10/2023 21:32:49
+/home/LogFiles/__lastCheckTime.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)08/10/2023 22:03:30
 /home/LogFiles/kudu/trace/04c7df6d3075-06f8e692-a17e-4023-8603-5f3f9d5b8117.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/04c7df6d3075-06f8e692-a17e-4023-8603-5f3f9d5b8117.txt)
 2023-08-10T21:25:33  Startup Request, url: /api/logstream/, method: GET, type: request, pid: 91,1,7, ScmType: None
 /home/LogFiles/kudu/trace/c3b771694387-b8f53d93-534d-40aa-bca2-97a0f043199f.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/c3b771694387-b8f53d93-534d-40aa-bca2-97a0f043199f.txt)
 2023-08-10T14:36:23  Startup Request, url: /detectors, method: GET, type: request, pid: 86,1,5, ScmType: None
+/home/LogFiles/kudu/trace/f9e938e3b8b8-9a2cb9c6-9403-4163-a06c-1b785d15b5bf.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/f9e938e3b8b8-9a2cb9c6-9403-4163-a06c-1b785d15b5bf.txt)
+2023-08-10T21:43:36  Startup Request, url: /api/logstream/, method: GET, type: request, pid: 86,1,16, ScmType: None
 /home/LogFiles/kudu/trace/fb9e6550d3d0-0caa0751-4765-4d91-a107-d1a62ddc1ee6.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/fb9e6550d3d0-0caa0751-4765-4d91-a107-d1a62ddc1ee6.txt)
 2023-08-10T16:08:57  Startup Request, url: /api/logstream/, method: GET, type: request, pid: 86,1,5, ScmType: None
 /home/LogFiles/2023_08_10_lw0sdlwk00000G_api-logic-server_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_api-logic-server_docker.log)
@@ -16,15 +18,15 @@ Starting Log Tail -n 10 of existing logs ----
 2023-08-10T20:04:41.586190079Z API Logic Server - Start Default App - redirect /admin-app/index.html
 2023-08-10T20:04:41.591233119Z 172.16.9.1 - - [10/Aug/2023 20:04:41] "[32mGET / HTTP/1.1[0m" 302 -
 /home/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log)
-2023-08-10T21:33:12.131774273Z
-2023-08-10T21:33:12.131779074Z
-2023-08-10T21:33:12.131784074Z  * Serving Flask app 'API Logic Server'
-2023-08-10T21:33:12.138258765Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
-2023-08-10T21:33:12.138275666Z  * Running on all addresses (0.0.0.0)
-2023-08-10T21:33:12.138281966Z  * Running on http://127.0.0.1:5656
-2023-08-10T21:33:12.138294966Z  * Running on http://172.16.13.3:5656
-2023-08-10T21:33:12.138300367Z [33mPress CTRL+C to quit[0m
-2023-08-10T21:36:53.128Z INFO  - Stopping site classicmodels because it failed during startup.
+2023-08-10T22:03:39.076252968Z 2023-08-10T22:03:39.076074Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2023-08-10T22:03:44.540999475Z 2023-08-10T22:03:44.540571Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2023-08-10T22:03:45.319680485Z 2023-08-10T22:03:45.319388Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2023-08-10T22:03:45.422916845Z 2023-08-10T22:03:45.422561Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2023-08-10T22:03:45.568563242Z 2023-08-10T22:03:45.568172Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2023-08-10T22:03:45.820020223Z 2023-08-10T22:03:45.819029Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2023-08-10T22:03:45.830649434Z 2023-08-10T22:03:45.820248Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2023-08-10T22:03:45.859135502Z 2023-08-10T22:03:45.857389Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2023-08-10T22:03:45.972478248Z 2023-08-10T22:03:45.972333Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
 /home/LogFiles/2023_08_10_lw0sdlwk00000G_mysql-service_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_mysql-service_docker.log)
 2023-08-10T19:51:17.872864366Z 2023-08-10T19:51:17.872688Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
 2023-08-10T19:51:22.471118426Z 2023-08-10T19:51:22.470828Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
@@ -37,3 +39,34 @@ Starting Log Tail -n 10 of existing logs ----
 2023-08-10T19:51:24.403016380Z 2023-08-10T19:51:24.402847Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
 Ending Log Tail of existing logs ---
 Starting Live Log Stream ---
+2023-08-10T22:03:30.568Z INFO  - Starting multi-container app..
+2023-08-10T22:03:32.072Z INFO  - latest Pulling from apilogicserver/mysql8.0
+2023-08-10T22:03:32.073Z INFO  -  Digest: sha256:4388016819096f2b1b054d69261950433c11cff1464985166d90af06b288819a
+2023-08-10T22:03:32.080Z INFO  -  Status: Image is up to date for apilogicserver/mysql8.0:latest
+2023-08-10T22:03:32.084Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
+2023-08-10T22:03:32.137Z INFO  - Starting container for site
+2023-08-10T22:03:32.138Z INFO  - docker run -d -p 7237:3306 --name classicmodels_mysql-service_0_16a327cd -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/mysql8.0:latest
+2023-08-10T22:03:33.077Z INFO  - latest Pulling from apilogicserver/classicmodels
+2023-08-10T22:03:33.078Z INFO  -  Digest: sha256:a2f7cabb1fb90c1d0e3ddc2bbefeee35cdbacbb0f4af07f459e19103e913870f
+2023-08-10T22:03:33.079Z INFO  -  Status: Image is up to date for apilogicserver/classicmodels:latest
+2023-08-10T22:03:33.089Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
+2023-08-10T22:03:33.134Z INFO  - Starting container for site
+2023-08-10T22:03:33.138Z INFO  - docker run -d  --name classicmodels_api-logic-server_0_16a327cd -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/classicmodels python app/api_logic_server_run.py
+2023-08-10T22:03:51.603Z ERROR - multi-container unit was not started successfully
+2023-08-10T22:03:51.612Z INFO  - Container logs from classicmodels_mysql-service_0_16a327cd = 2023-08-10T22:03:35.987593082Z 2023-08-10 22:03:35+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
+2023-08-10T22:03:37.288759888Z 2023-08-10 22:03:37+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2023-08-10T22:03:37.354848678Z 2023-08-10 22:03:37+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.23-1debian10 started.
+2023-08-10T22:03:39.064691910Z 2023-08-10T22:03:38.991972Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.23) starting as process 1
+2023-08-10T22:03:39.076252968Z 2023-08-10T22:03:39.076074Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2023-08-10T22:03:44.540999475Z 2023-08-10T22:03:44.540571Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2023-08-10T22:03:45.319680485Z 2023-08-10T22:03:45.319388Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2023-08-10T22:03:45.422916845Z 2023-08-10T22:03:45.422561Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2023-08-10T22:03:45.568563242Z 2023-08-10T22:03:45.568172Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2023-08-10T22:03:45.820020223Z 2023-08-10T22:03:45.819029Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2023-08-10T22:03:45.830649434Z 2023-08-10T22:03:45.820248Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2023-08-10T22:03:45.859135502Z 2023-08-10T22:03:45.857389Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2023-08-10T22:03:45.972478248Z 2023-08-10T22:03:45.972333Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2023-08-10T22:03:53.677Z INFO  - Container logs from classicmodels_api-logic-server_0_16a327cd = 2023-08-10T22:03:42.210961877Z python: can't open file '/home/api_logic_project/app/api_logic_server_run.py': [Errno 2] No such file or directory
+2023-08-10T22:03:47.144051634Z python: can't open file '/home/api_logic_project/app/api_logic_server_run.py': [Errno 2] No such file or directory
+2023-08-10T22:03:50.642136492Z python: can't open file '/home/api_logic_project/app/api_logic_server_run.py': [Errno 2] No such file or directory
+2023-08-10T22:03:54.020Z INFO  - Stopping site classicmodels because it failed during startup.
