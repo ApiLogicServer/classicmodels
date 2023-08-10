@@ -1,22 +1,9 @@
 app starts, login screen appears but fails
 
-Connecting...
-2023-08-10T16:01:37  Welcome, you are now connected to log-streaming service.
-Starting Log Tail -n 10 of existing logs ----
-/home/LogFiles/__lastCheckTime.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)08/10/2023 15:57:09
-/home/LogFiles/kudu/trace/c3b771694387-b8f53d93-534d-40aa-bca2-97a0f043199f.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/c3b771694387-b8f53d93-534d-40aa-bca2-97a0f043199f.txt)
-2023-08-10T14:36:23  Startup Request, url: /detectors, method: GET, type: request, pid: 86,1,5, ScmType: None
-/home/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log)
-2023-08-10T15:57:13.274Z INFO  -  Status: Image is up to date for apilogicserver/mysql8.0:latest
-2023-08-10T15:57:13.306Z INFO  - Pull Image successful, Time taken: 0 Minutes and 0 Seconds
-2023-08-10T15:57:13.382Z INFO  - Starting container for site
-2023-08-10T15:57:13.383Z INFO  - docker run -d  --name classicmodels_mysql-service_0_3face82e -e WEBSITE_SITE_NAME=classicmodels -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=classicmodels.azurewebsites.net -e WEBSITE_INSTANCE_ID=0326a2df023f7e10890c466ed42ee018ada6c369758694066b98fbadb3f380c4 -e WEBSITE_USE_DIAGNOSTIC_SERVER=False apilogicserver/mysql8.0:latest
-2023-08-10T15:57:13.384Z INFO  - Logging is not enabled for this container.Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
-2023-08-10T15:57:43.038Z INFO  - Started multi-container app
-2023-08-10T15:57:43.046Z INFO  - Initiating warmup request to container classicmodels_api-logic-server_0_3face82e for site classicmodels
-2023-08-10T15:57:43.076Z INFO  - Container classicmodels_api-logic-server_0_3face82e for site classicmodels initialized successfully and is ready to serve requests.
-Ending Log Tail of existing logs ---
-Starting Live Log Stream ---
+https://learn.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs#enable-application-logging-linuxcontainer
+
+To enable web server logging for Windows apps in the Azure portal, navigate to your app and select App Service logs.
+For Web server logging, select Storage to store logs on blob storage, or File System to store logs on the App Service file system.
 
 
 then,

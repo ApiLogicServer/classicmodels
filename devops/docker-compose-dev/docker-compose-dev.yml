@@ -39,7 +39,7 @@ services:
             # but on Az, use cloud storage
             - ${WEBAPP_STORAGE_HOME}/classicmodels:/app
         # https://stackoverflow.com/questions/39460892/gunicorn-no-module-named-myproject
-        command: python api_logic_server_run.py
+        # command: python api_logic_server_run.py
         # command:  bash /app/start.sh
         working_dir: /home/api_logic_project
 
