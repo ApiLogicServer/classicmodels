@@ -1,0 +1,19 @@
+2023-08-10T15:06:31  Welcome, you are now connected to log-streaming service.
+Starting Log Tail -n 10 of existing logs ----
+/home/LogFiles/__lastCheckTime.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)
+08/10/2023 15:05:15
+/home/LogFiles/kudu/trace/c3b771694387-b8f53d93-534d-40aa-bca2-97a0f043199f.txt  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/c3b771694387-b8f53d93-534d-40aa-bca2-97a0f043199f.txt)
+2023-08-10T14:36:23  Startup Request, url: /detectors, method: GET, type: request, pid: 86,1,5, ScmType: None
+/home/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log  (https://classicmodels.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_10_lw0sdlwk00000G_docker.log)
+2023-08-10T14:52:21.678Z ERROR - Start multi-container app failed
+2023-08-10T14:52:21.683Z INFO  - Stopping site classicmodels because it failed during startup.
+2023-08-10T15:00:15.794Z INFO  - Starting multi-container app..
+2023-08-10T15:00:15.795Z ERROR - Exception in multi-container config parsing: YamlException: (Line: 39, Col: 15, Idx: 1613) - (Line: 39, Col: 30, Idx: 1628): Bind mount must start with ${WEBAPP_STORAGE_HOME}.
+2023-08-10T15:00:15.803Z ERROR - Start multi-container app failed
+2023-08-10T15:00:15.811Z INFO  - Stopping site classicmodels because it failed during startup.
+2023-08-10T15:05:15.909Z INFO  - Starting multi-container app..
+2023-08-10T15:05:15.910Z ERROR - Exception in multi-container config parsing: YamlException: (Line: 39, Col: 15, Idx: 1613) - (Line: 39, Col: 30, Idx: 1628): Bind mount must start with ${WEBAPP_STORAGE_HOME}.
+2023-08-10T15:05:15.910Z ERROR - Start multi-container app failed
+2023-08-10T15:05:15.941Z INFO  - Stopping site classicmodels because it failed during startup.
+Ending Log Tail of existing logs ---
+Starting Live Log Stream ---

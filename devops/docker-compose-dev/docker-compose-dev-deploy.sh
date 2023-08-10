@@ -4,6 +4,7 @@
 # sh ./devops/docker-compose/docker-compose-dev-deploy.sh
 
 # ref: https://learn.microsoft.com/en-us/azure/app-service/tutorial-multi-container-app
+# eg: https://github.com/Azure-Samples/multicontainerwordpress
 
 # login to portal
 
