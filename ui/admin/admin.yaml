@@ -1,0 +1,264 @@
+about:
+  date: August 08, 2023 13:27:28
+  recent_changes: works with modified safrs-react-admin
+  version: 0.0.0
+api_root: '{http_type}://{swagger_host}:{port}/{api}'
+authentication:
+  endpoint: '{http_type}://{swagger_host}:{port}/api/auth/login'
+info:
+  number_relationships: 8
+  number_tables: 8
+resources:
+  Customer:
+    attributes:
+    - label: ' customer Number*'
+      name: customerNumber
+      search: true
+      sort: true
+    - name: salesRepEmployeeNumber
+    - name: customerName
+      required: true
+    - name: contactLastName
+      required: true
+    - name: contactFirstName
+      required: true
+    - name: phone
+      required: true
+    - name: addressLine1
+      required: true
+    - name: addressLine2
+    - name: city
+      required: true
+    - name: state
+    - name: postalCode
+    - name: country
+      required: true
+    - name: creditLimit
+    tab_groups:
+    - direction: tomany
+      fks:
+      - customerNumber
+      name: OrderList
+      resource: Order
+    - direction: tomany
+      fks:
+      - customerNumber
+      name: PaymentList
+      resource: Payment
+    - direction: toone
+      fks:
+      - salesRepEmployeeNumber
+      name: employee
+      resource: Employee
+    type: Customer
+    user_key: customerNumber
+  Employee:
+    attributes:
+    - label: ' employee Number*'
+      name: employeeNumber
+      search: true
+      sort: true
+    - name: officeCode
+      required: true
+    - name: reportsTo
+    - name: lastName
+      required: true
+    - name: firstName
+      required: true
+    - name: extension
+      required: true
+    - name: email
+      required: true
+    - name: jobTitle
+      required: true
+    tab_groups:
+    - direction: tomany
+      fks:
+      - salesRepEmployeeNumber
+      name: CustomerList
+      resource: Customer
+    - direction: tomany
+      fks:
+      - reportsTo
+      name: EmployeeList
+      resource: Employee
+    - direction: toone
+      fks:
+      - officeCode
+      name: office
+      resource: Office
+    - direction: toone
+      fks:
+      - reportsTo
+      name: Employee
+      resource: Employee
+    type: Employee
+    user_key: employeeNumber
+  Office:
+    attributes:
+    - label: ' office Code*'
+      name: officeCode
+      required: true
+      search: true
+      sort: true
+    - name: city
+      required: true
+    - name: phone
+      required: true
+    - name: addressLine1
+      required: true
+    - name: addressLine2
+    - name: state
+    - name: country
+      required: true
+    - name: postalCode
+      required: true
+    - name: territory
+      required: true
+    tab_groups:
+    - direction: tomany
+      fks:
+      - officeCode
+      name: EmployeeList
+      resource: Employee
+    type: Office
+    user_key: officeCode
+  Order:
+    attributes:
+    - label: ' order Number*'
+      name: orderNumber
+      search: true
+      sort: true
+    - name: customerNumber
+      required: true
+    - name: orderDate
+      required: true
+      type: DATE
+    - name: requiredDate
+      required: true
+      type: DATE
+    - name: shippedDate
+      type: DATE
+    - name: status
+      required: true
+    - name: comments
+    tab_groups:
+    - direction: tomany
+      fks:
+      - orderNumber
+      name: OrderdetailList
+      resource: Orderdetail
+    - direction: toone
+      fks:
+      - customerNumber
+      name: customer
+      resource: Customer
+    type: Order
+    user_key: orderNumber
+  Orderdetail:
+    attributes:
+    - label: ' order Number*'
+      name: orderNumber
+      search: true
+      sort: true
+    - name: orderNumber
+    - name: productCode
+      required: true
+    - name: quantityOrdered
+      required: true
+    - name: priceEach
+      required: true
+    - name: orderLineNumber
+      required: true
+    tab_groups:
+    - direction: toone
+      fks:
+      - orderNumber
+      name: order
+      resource: Order
+    - direction: toone
+      fks:
+      - productCode
+      name: product
+      resource: Product
+    type: Orderdetail
+    user_key: orderNumber
+  Payment:
+    attributes:
+    - label: ' customer Number*'
+      name: customerNumber
+      search: true
+      sort: true
+    - name: customerNumber
+    - name: checkNumber
+      required: true
+    - name: paymentDate
+      required: true
+      type: DATE
+    - name: amount
+      required: true
+    tab_groups:
+    - direction: toone
+      fks:
+      - customerNumber
+      name: customer
+      resource: Customer
+    type: Payment
+    user_key: customerNumber
+  Product:
+    attributes:
+    - label: ' product Code*'
+      name: productCode
+      required: true
+      search: true
+      sort: true
+    - name: productLine
+      required: true
+    - name: productName
+      required: true
+    - name: productScale
+      required: true
+    - name: productVendor
+      required: true
+    - name: productDescription
+      required: true
+    - name: quantityInStock
+      required: true
+    - name: buyPrice
+      required: true
+    - name: MSRP
+      required: true
+    tab_groups:
+    - direction: tomany
+      fks:
+      - productCode
+      name: OrderdetailList
+      resource: Orderdetail
+    - direction: toone
+      fks:
+      - productLine
+      name: productline
+      resource: Productline
+    type: Product
+    user_key: productCode
+  Productline:
+    attributes:
+    - label: ' product Line*'
+      name: productLine
+      required: true
+      search: true
+      sort: true
+    - name: textDescription
+    - name: htmlDescription
+    - name: image
+    tab_groups:
+    - direction: tomany
+      fks:
+      - productLine
+      name: ProductList
+      resource: Product
+    type: Productline
+    user_key: productLine
+settings:
+  HomeJS: http://localhost:5656/admin-app/home.js
+  max_list_columns: 8
