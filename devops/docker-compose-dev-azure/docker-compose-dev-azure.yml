@@ -3,7 +3,6 @@ version: "3.5"
 # see ./build-instructions.sh for notes on how to run
 
 services:
-
     api-logic-server:
         image: apilogicserver/classicmodels
         environment:
