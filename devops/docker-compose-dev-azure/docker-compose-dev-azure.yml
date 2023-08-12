@@ -8,7 +8,7 @@ services:
         environment:
           - APILOGICPROJECT_VERBOSE=true
           - SECURITY_ENABLED=true
-          - APILOGICPROJECT_CLIENT_URI=//classicmodels.azurewebsites.net/api
+          - APILOGICPROJECT_CLIENT_URI=//classicmodels.azurewebsites.net
           # - APILOGICPROJECT_HTTP_SCHEME=https
           - PYTHONPATH=/app/ApiLogicProject 
           - APILOGICPROJECT_SQLALCHEMY_DATABASE_URI=mysql+pymysql://root:p@mysql-service:3306/classicmodels
