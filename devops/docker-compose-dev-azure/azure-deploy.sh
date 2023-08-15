@@ -2,6 +2,12 @@
 
 # intended for use in portal cli - not to be run on your local machine.
 
+projectname="classicmodels"  # lower case, only
+resourcegroup="classicmodels_rg"
+dockerrepositoryname="apilogicserver"  # change this to your DockerHub Repository
+githubaccount="apilogicserver"         # change this to your GitHub account
+version="1.0.0"
+
 # see docs: https://apilogicserver.github.io/Docs/DevOps-Containers-Deploy-Multi/
 # modeled after: https://learn.microsoft.com/en-us/azure/app-service/tutorial-multi-container-app
 # which uses: https://github.com/Azure-Samples/multicontainerwordpress
@@ -9,12 +15,6 @@
 # login to Azure Portal CLI
 # git clone https://github.com/$githubaccount/$projectname.git
 # cd classicmodels
-
-projectname="classicmodels"  # lower case, only
-resourcegroup="classicmodels_rg"
-dockerrepositoryname="apilogicserver"  # change this to your DockerHub Repository
-githubaccount="apilogicserver"         # change this to your GitHub account
-version="1.0.0"
 
 debug() {
   debug="disabled"
