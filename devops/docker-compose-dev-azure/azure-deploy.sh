@@ -6,6 +6,7 @@ projectname="classicmodels"  # lower case, only
 resourcegroup="classicmodels_rg"
 dockerrepositoryname="apilogicserver"  # change this to your DockerHub Repository
 githubaccount="apilogicserver"         # change this to your GitHub account
+$variable="XYZ"
 version="1.0.0"
 
 # see docs: https://apilogicserver.github.io/Docs/DevOps-Containers-Deploy-Multi/
@@ -17,24 +18,19 @@ version="1.0.0"
 # cd classicmodels
 # sh devops/docker-compose-dev-azure/azure-deploy.sh
 
-debug() {
-  # debug="disabled"
-  echo "$1"
-}
-
 echo " "
 if [ "$1" = "." ]; then
-  debug "..using defaults"
+  echo "..using defaults"
 else
-  debug "using arg overrides"
+  echo "using arg overrides"
   projectname="$1"
   githubaccount="$2"
   dockerrepositoryname="$3"
   resourcegroup="$4"
 fi
 
-debug "\n"
-debug "Azure Deploy here, 1.0"
+echo "\n"
+echo "Azure Deploy here, 1.0"
 echo "\nAzure Portal CLI commands to deploy project\n"
 echo " "
 echo "Steps performed on Azure Portal CLI to enable running these commands:"
@@ -47,7 +43,7 @@ echo "  1. You have published your project to GitHub: https://github.com/${githu
 echo "  2. You have built your project image, and pushed it to DockerHub: ${dockerrepositoryname}/${projectname}"
 echo " "
 echo "  cd classicmodels"
-echo "  sh devops/docker/docker-compose-dev-azure/azure-deploy.sh [ . | args ]"
+echo "  sh devops/docker-compose-dev-azure/azure-deploy.sh [ . | args ]"
 echo "    . means use defaults:"
 echo "        ${dockerrepositoryname}/${projectname}:${version}"
 echo "    <args> = projectname githubaccount dockerrepositoryname resourcegroupname"
