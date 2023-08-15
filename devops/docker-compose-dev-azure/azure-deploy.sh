@@ -15,6 +15,7 @@ version="1.0.0"
 # login to Azure Portal CLI (substitute your github account for apilogicserver)
 # git clone https://github.com/apilogicserver/classicmodels.git
 # cd classicmodels
+# sh devops/docker-compose-dev-azure/azure-deploy.sh
 
 debug() {
   debug="disabled"
@@ -43,7 +44,7 @@ if [ $# -eq 0 ]; then
   echo " cd classicmodels"
   echo " "
   echo "Prereqs"
-  echo "  1. You have published your project to GitHub: https://github.com/$githubaccount/$projectname.git
+  echo "  1. You have published your project to GitHub: https://github.com/$githubaccount/$projectname.git"
   echo "  2. You have built your project image, and pushed it to DockerHub: ${dockerrepositoryname}/${projectname}"
   echo " "
   echo "  cd classicmodels"
