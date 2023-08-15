@@ -12,8 +12,8 @@ version="1.0.0"
 # modeled after: https://learn.microsoft.com/en-us/azure/app-service/tutorial-multi-container-app
 # which uses: https://github.com/Azure-Samples/multicontainerwordpress
 
-# login to Azure Portal CLI
-# git clone https://github.com/$githubaccount/$projectname.git
+# login to Azure Portal CLI (substitute your github account for apilogicserver)
+# git clone https://github.com/apilogicserver/classicmodels.git
 # cd classicmodels
 
 debug() {
