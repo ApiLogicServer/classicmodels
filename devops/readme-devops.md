@@ -1,46 +1,19 @@
-These resources are designed to provide useful starting point for sometimes-tricky devops operations.
+Use these directories to rapidly deploy your system to the cloud.  This means you can provide a preview for your team:
 
-&nbsp;
+* Developers can use the API to begin custom User Interface development
 
-## auth-db
+* **Business Users** can use the Admin App to see working software, enabling collaboration the the development team.
 
-After creating projects, you can add role-based security:
+These directories simplify the sometimes-tricky deployment to the cloud. 
 
-```bash
-cd <your project>
-ApiLogicServer add-auth --project_name=. --db_url=mysql+pymysql://root:p@localhost:3306/authdb
-```
+1. Use `auth-db` to prepare a docker image that includes test database data 
 
-The system introspects your `--db_url` database, creates models for it, and configures your project to enable security.
+2. Start with `docker-image` - create an image for deployment
 
-The command above uses the pre-supplied [docker database](https://apilogicserver.github.io/Docs/Database-Connectivity/#docker-databases), here MySQL.
+3. Use `docker-compose-dev-local` to verify multi-container (application, database) execution
 
-Security databases must include certain tables and columns.  Your authdb can optionally provide a superset of these.  Such extensions are useful in declaring role-based authorization.
+4. Use `docker-compose-dev-localazure` to deploy this multi-container system to azure
 
-To help you get started, the `auth-db` folder provides starter kits for creating these databases.  Alter these files for your project, prepare database containers for your team, and use them in the `add-auth` command above.
+5. Optionally, use `docker-compose-dev-local-nginx` to explore an additional web server container - nginx
 
-&nbsp;
-
-## docker-compose
-
-Use docker compose to choreograph multiple services (e.g, your application, database and web server) for a multi-tiered system.
-
-Here is an example using MySQL / `classicmodels` - [click here](https://github.com/ApiLogicServer/docker-compose-mysql-classicmodels.git).  In this example, you create a complete project.  
-
-> We strongly recommend executing this example before configuring your own projects.  Should only take 15-20 minutes.
-
-For an example using postgres / `Northwind`, [click here](https://github.com/ApiLogicServer/docker-compose-nw-postgres).  In this example, you use an existing github project.
-
-The docker files in this directory are from the MySQL project.  To adapt them to your own project, you will need to update the database section of `docker-compose.yml`.
-
-&nbsp;
-
-## docker-image
-
-These scripts simplify creating and running docker containers for your project.  Their use is illustrated in the links above.
-
-&nbsp;
-
-## More information
-
-For more information, see [DevOps Documentation](https://apilogicserver.github.io/Docs/DevOps-Containers/).
+> For more information, [click here](https://apilogicserver.github.io/Docs/DevOps-Containers-Deploy-Multi/).
