@@ -29,9 +29,10 @@ else
   resourcegroup="$4"
 fi
 
-echo "\n"
-echo "Azure Deploy here, 1.0"
-echo "\nAzure Portal CLI commands to deploy project\n"
+echo " "
+echo "Azure Deploy here, 1.0 - $variable"
+echo " "
+echo "Azure Portal CLI commands to deploy project"
 echo " "
 echo "Steps performed on Azure Portal CLI to enable running these commands:"
 echo " # we really only need the docker compose file"
