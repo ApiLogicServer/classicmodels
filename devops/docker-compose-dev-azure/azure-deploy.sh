@@ -59,7 +59,7 @@ read -p "Verify settings above, then press ENTER to proceed> "
 az group create --name $resourcegroup --location "westus"
 
 # create service plan
-az appservice plan create --name myAppServicePlan --resource-group $resourcegroup g --sku S1 --is-linux
+az appservice plan create --name myAppServicePlan --resource-group $resourcegroup --sku S1 --is-linux
 
 # create docker compose app
 az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure/docker-compose-dev-azure.yml
