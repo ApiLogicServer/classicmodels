@@ -43,6 +43,11 @@ debug "Azure Deploy here, 1.0"
 if [ $# -eq 0 ]; then
   echo "\nAzure Portal CLI commands to deploy project\n"
   echo " "
+  echo "Steps performed on Azure Portal CLI to enable running these commands:"
+  echo " # we really only need the docker compose file"
+  echo " git clone https://github.com/$githubaccount/$projectname.git"
+  echo " cd classicmodels"
+  echo " "
   echo "Prereqs"
   echo "  1. You have published your project to GitHub: https://github.com/$githubaccount/$projectname.git
   echo "  2. You have built your project image, and pushed it to DockerHub: ${dockerrepositoryname}/${projectname}"
@@ -57,11 +62,6 @@ if [ $# -eq 0 ]; then
 fi
 
 read -p "Verify settings above, then press ENTER to proceed> "
-
-# we really only need the docker compose file
-git clone https://github.com/$githubaccount/$projectname.git
-
-cd classicmodels
 
 # create container group
 az group create --name $resourcegroup --location "westus"
