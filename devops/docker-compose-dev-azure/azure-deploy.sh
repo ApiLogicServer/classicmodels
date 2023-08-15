@@ -6,16 +6,9 @@
 # modeled after: https://learn.microsoft.com/en-us/azure/app-service/tutorial-multi-container-app
 # which uses: https://github.com/Azure-Samples/multicontainerwordpress
 
-# login to portal
-
-# To build container for your ApiLogicProject:
-#    create / customize your project as you normally would
-#    edit this file: change your_account/your_repository as appropriate
-#    be sure to add security (already done for demo)
-
-#    in terminal (not in VSCode docker - docker is not installed there)
-#    $ cd <your project>
-#    $ sh devops/docker-image/build_image.sh .
+# login to Azure Portal CLI
+# git clone https://github.com/$githubaccount/$projectname.git
+# cd classicmodels
 
 projectname="classicmodels"  # lower case, only
 resourcegroup="classicmodels_rg"
