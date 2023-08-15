@@ -6,7 +6,6 @@ projectname="classicmodels"  # lower case, only
 resourcegroup="classicmodels_rg"
 dockerrepositoryname="apilogicserver"  # change this to your DockerHub Repository
 githubaccount="apilogicserver"         # change this to your GitHub account
-$variable="XYZ"
 version="1.0.0"
 
 # see docs: https://apilogicserver.github.io/Docs/DevOps-Containers-Deploy-Multi/
@@ -30,7 +29,7 @@ else
 fi
 
 echo " "
-echo "Azure Deploy here, 1.0 - $variable"
+echo "Azure Deploy here, 1.0"
 echo " "
 echo "Azure Portal CLI commands to deploy project"
 echo " "
