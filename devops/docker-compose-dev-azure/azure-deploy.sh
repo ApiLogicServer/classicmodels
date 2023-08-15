@@ -55,6 +55,8 @@ echo " "
 
 read -p "Verify settings above, then press ENTER to proceed> "
 
+set -x          # activate debugging from here
+
 # create container group
 az group create --name ${resourcegroup} --location "westus"
 
