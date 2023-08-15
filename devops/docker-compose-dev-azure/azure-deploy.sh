@@ -53,7 +53,7 @@ echo " "
 
 read -p "Verify settings above, then press ENTER to proceed> "
 
-set -x          # activate debugging from here
+set -x # echo commands
 
 # create container group
 az group create --name $resourcegroup --location "westus"
@@ -63,6 +63,8 @@ az appservice plan create --name myAppServicePlan --resource-group $resourcegrou
 
 # create docker compose app
 az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure/docker-compose-dev-azure.yml
+
+set +x # reset echo
 
 echo "enable logging: https://learn.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs#enable-application-logging-linuxcontainer"
 echo "   To enable web server logging for Windows apps in the Azure portal, navigate to your app and select App Service logs"
