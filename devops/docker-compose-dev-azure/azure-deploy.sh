@@ -18,8 +18,8 @@ version="1.0.0"
 # sh devops/docker-compose-dev-azure/azure-deploy.sh
 
 debug() {
-  debug="disabled"
-  # echo "$1"
+  # debug="disabled"
+  echo "$1"
 }
 
 echo " "
@@ -35,26 +35,23 @@ fi
 
 debug "\n"
 debug "Azure Deploy here, 1.0"
-if [ $# -eq 0 ]; then
-  echo "\nAzure Portal CLI commands to deploy project\n"
-  echo " "
-  echo "Steps performed on Azure Portal CLI to enable running these commands:"
-  echo " # we really only need the docker compose file"
-  echo " git clone https://github.com/$githubaccount/$projectname.git"
-  echo " cd classicmodels"
-  echo " "
-  echo "Prereqs"
-  echo "  1. You have published your project to GitHub: https://github.com/$githubaccount/$projectname.git"
-  echo "  2. You have built your project image, and pushed it to DockerHub: ${dockerrepositoryname}/${projectname}"
-  echo " "
-  echo "  cd classicmodels"
-  echo "  sh devops/docker/docker-compose-dev-azure/azure-deploy.sh [ . | args ]"
-  echo "    . means use defaults:"
-  echo "        ${dockerrepositoryname}/${projectname}:${version}"
-  echo "    <args> = projectname githubaccount dockerrepositoryname resourcegroupname"
-  echo " "
-  exit 0
-fi
+echo "\nAzure Portal CLI commands to deploy project\n"
+echo " "
+echo "Steps performed on Azure Portal CLI to enable running these commands:"
+echo " # we really only need the docker compose file"
+echo " git clone https://github.com/$githubaccount/$projectname.git"
+echo " cd classicmodels"
+echo " "
+echo "Prereqs"
+echo "  1. You have published your project to GitHub: https://github.com/${githubaccount}/${projectname}.git"
+echo "  2. You have built your project image, and pushed it to DockerHub: ${dockerrepositoryname}/${projectname}"
+echo " "
+echo "  cd classicmodels"
+echo "  sh devops/docker/docker-compose-dev-azure/azure-deploy.sh [ . | args ]"
+echo "    . means use defaults:"
+echo "        ${dockerrepositoryname}/${projectname}:${version}"
+echo "    <args> = projectname githubaccount dockerrepositoryname resourcegroupname"
+echo " "
 
 read -p "Verify settings above, then press ENTER to proceed> "
 
