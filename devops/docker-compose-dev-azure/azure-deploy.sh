@@ -2,6 +2,7 @@
 
 # intended for use in portal cli - not to be run on your local machine.
 
+# see docs: https://apilogicserver.github.io/Docs/DevOps-Containers-Deploy-Multi/
 # modeled after: https://learn.microsoft.com/en-us/azure/app-service/tutorial-multi-container-app
 # which uses: https://github.com/Azure-Samples/multicontainerwordpress
 
