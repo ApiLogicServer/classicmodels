@@ -56,13 +56,13 @@ echo " "
 read -p "Verify settings above, then press ENTER to proceed> "
 
 # create container group
-az group create --name $resourcegroup --location "westus"
+az group create --name ${resourcegroup} --location "westus"
 
 # create service plan
-az appservice plan create --name myAppServicePlan --resource-group $resourcegroup --sku S1 --is-linux
+az appservice plan create --name myAppServicePlan --resource-group ${resourcegroup} --sku S1 --is-linux
 
 # create docker compose app
-az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure/docker-compose-dev-azure.yml
+az webapp create --resource-group ${resourcegroup} --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure/docker-compose-dev-azure.yml
 
 # enable logging: https://learn.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs#enable-application-logging-linuxcontainer
 
