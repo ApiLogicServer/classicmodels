@@ -51,7 +51,7 @@ if [ $# -eq 0 ]; then
   echo "  sh devops/docker/docker-compose-dev-azure/azure-deploy.sh [ . | args ]"
   echo "    . means use defaults:"
   echo "        ${dockerrepositoryname}/${projectname}:${version}"
-  echo "    <args> = projectname githubaccount dockerrepositoryname resourcegroupname
+  echo "    <args> = projectname githubaccount dockerrepositoryname resourcegroupname"
   echo " "
   exit 0
 fi
