@@ -2,9 +2,12 @@
 
 # intended for use in portal cli - not to be run on your local machine.
 
-$ FIXME - webapp went local, names are not scoped
+# FIXME - webapp went local, names are not scoped
+# az webapp create --resource-group classicmodels_rg_ngnix --plan myAppServicePlan --name classicmodels_ngnix --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
+# Site names only allow alphanumeric characters and hyphens, cannot start or end in a hyphen, and must be less than 64 chars.
 
-projectname="classicmodels-ngnix"  # lower case, only.  not unique in resourcegroup
+
+projectname="classicmodelsngnix"  # lower case, only.  not unique in resourcegroup
 resourcegroup="classicmodels_rg_ngnix"
 dockerrepositoryname="apilogicserver"  # change this to your DockerHub Repository
 githubaccount="apilogicserver"         # change this to your GitHub account
