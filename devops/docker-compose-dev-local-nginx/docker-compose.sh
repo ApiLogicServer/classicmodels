@@ -49,5 +49,6 @@ pushd ./../../
 # ls  # verify project root docker-compose --env-file project/myproject/.env up
 # https://stackoverflow.com/questions/65484277/access-env-file-variables-in-docker-compose-file
 
-docker compose -f ./devops/docker-compose-dev-local-nginx/docker-compose-dev-local-nginx.yml --env-file ./devops/docker-compose-dev-local-nginx/env-docker-compose.env up
+docker compose -f ./devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml --env-file ./devops/docker-compose-dev-azure-nginx/env-docker-compose.env up
+# No such file or directory: './devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml'
 popd
