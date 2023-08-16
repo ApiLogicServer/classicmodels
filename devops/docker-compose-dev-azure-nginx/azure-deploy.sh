@@ -4,7 +4,7 @@
 
 $ FIXME - webapp went local, names are not scoped
 
-projectname="classicmodels_ngnix"  # lower case, only.  unique in resourcegroup
+projectname="classicmodels-ngnix"  # lower case, only.  not unique in resourcegroup
 resourcegroup="classicmodels_rg_ngnix"
 dockerrepositoryname="apilogicserver"  # change this to your DockerHub Repository
 githubaccount="apilogicserver"         # change this to your GitHub account
