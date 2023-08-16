@@ -82,7 +82,7 @@ az group create --name $resourcegroup --location "westus"
 az appservice plan create --name myAppServicePlan --resource-group $resourcegroup --sku S1 --is-linux
 
 # create docker compose app
-az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
+az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
 
 set +x # reset echo
 
