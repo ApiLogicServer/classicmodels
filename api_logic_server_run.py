@@ -2,7 +2,7 @@
 
 ###############################################################################
 #
-#    This file initializes and starts the API Logic Server (v 09.02.08, August 14, 2023 19:49:00):
+#    This file initializes and starts the API Logic Server (v 09.02.10, August 16, 2023 09:07:25):
 #        $ python3 api_logic_server_run.py [--help]
 #
 #    Then, access the Admin App and API via the Browser, eg:  
@@ -73,6 +73,7 @@ from sqlalchemy.orm import Session
 import socket
 import warnings
 from flask import Flask, redirect, send_from_directory, send_file
+from flask_cors import CORS
 from safrs import ValidationError, SAFRSBase, SAFRSAPI
 import ui.admin.admin_loader as AdminLoader
 from security.system.authentication import configure_auth
@@ -115,7 +116,7 @@ if debug_value is not None:  # > export APILOGICPROJECT_DEBUG=True
         app_logger.setLevel(logging.DEBUG)
         app_logger.debug(f'\nDEBUG level set from env\n')
 app_logger.info(f'\nAPI Logic Project ({project_name}) Starting with CLI args: \n.. {args}\n')
-app_logger.info(f'Created August 14, 2023 19:49:00 at {str(current_path)}\n')
+app_logger.info(f'Created August 16, 2023 09:07:25 at {str(current_path)}\n')
 
 
 class ValidationErrorExt(ValidationError):
@@ -262,6 +263,10 @@ def api_logic_server_setup(flask_app: Flask, args: Args):
 
 flask_app = Flask("API Logic Server", template_folder='ui/templates')  # templates to load ui/admin/admin.yaml
 
+CORS(flask_app, resources=[{r"/api/*": {"origins": "*"}}],
+     allow_headers=["Content-Type", "Authorization", "Access-Control-Allow-Credentials"],supports_credentials=True)
+
+
 args = Args(flask_app=flask_app)                                # creation defaults
 
 flask_app.config.from_object("config.Config")
@@ -285,7 +290,7 @@ api_logic_server_setup(flask_app, args)
 AdminLoader.admin_events(flask_app = flask_app, args = args, validation_error = ValidationError)
 
 if __name__ == "__main__":
-    msg = f'API Logic Project loaded (not WSGI), version 09.02.08\n'
+    msg = f'API Logic Project loaded (not WSGI), version 09.02.10\n'
     if is_docker():
         msg += f' (running from docker container at flask_host: {args.flask_host} - may require refresh)\n'
     else:
@@ -307,7 +312,7 @@ if __name__ == "__main__":
 
     flask_app.run(host=args.flask_host, threaded=True, port=args.port)
 else:
-    msg = f'API Logic Project Loaded (WSGI), version 09.02.08\n'
+    msg = f'API Logic Project Loaded (WSGI), version 09.02.10\n'
     if is_docker():
         msg += f' (running from docker container at {args.flask_host} - may require refresh)\n'
     else:
