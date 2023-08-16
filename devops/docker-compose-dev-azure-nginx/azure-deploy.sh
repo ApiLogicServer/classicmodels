@@ -55,7 +55,7 @@ read -p "Verify settings above, then press ENTER to proceed> "
 
 if [ ! -d "./devops/docker-compose-dev-azure-nginx/www/admin-app" ] 
 then
-    echo "\nYou need to install the etc/www directories first - use sh devops/docker-compose-dev-local-nginx/install-webapp.sh\n" 
+    echo "\nYou need to install the etc/www directories first - use sh devops/docker-compose-dev-azure-nginx/install-webapp.sh\n" 
     exit 1
 else
     echo "\n... web app check complete\n"
