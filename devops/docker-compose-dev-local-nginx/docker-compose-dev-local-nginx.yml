@@ -1,6 +1,13 @@
 # preferred...
+# cd <project> (or use IDE terminal)
+# cd devops/docker-compose
+# sh docker-compose.sh
+
+# or, for debug / more logging
+# set APILOGICPROJECT_CLIENT_URI, and use "for testing", below
 # cd <project>
-# sh devops/docker-compose-dev-local-nginx/docker-compose.sh
+# docker compose -f ./devops/docker-compose/docker-compose.yml --env-file ./devops/docker-compose/env-docker-compose.env up
+# --> builds, runs at localhost
 
 version: "3.5"
 

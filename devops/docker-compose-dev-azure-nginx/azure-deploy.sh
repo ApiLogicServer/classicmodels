@@ -2,16 +2,6 @@
 
 # intended for use in portal cli - not to be run on your local machine.
 
-# FIXME - webapp went local, names are not scoped
-# az webapp create --resource-group classicmodels_rg_ngnix --plan myAppServicePlan --name classicmodels_ngnix --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
-# Site names only allow alphanumeric characters and hyphens, cannot start or end in a hyphen, and must be less than 64 chars.
-
-# az webapp create --resource-group classicmodels_rg_ngnix --plan myAppServicePlan --name classicmodelsngnix --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
-# No such file or directory: 'devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml'
-# docker-compose-dev-azure-nginx
-# docker-compose-dev-azure-nginx.yml
-# ok: devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml
-
 projectname="classicmodelsngnix"  # lower case, only.  not unique in resourcegroup
 resourcegroup="classicmodels_rg_ngnix"
 dockerrepositoryname="apilogicserver"  # change this to your DockerHub Repository
@@ -63,12 +53,14 @@ echo " "
 
 read -p "Verify settings above, then press ENTER to proceed> "
 
+echo " "
+echo "check webapp and security..."
 if [ ! -d "./devops/docker-compose-dev-azure-nginx/www/admin-app" ] 
 then
     echo "\nYou need to install the etc/www directories first - use sh devops/docker-compose-dev-azure-nginx/install-webapp.sh\n" 
     exit 1
 else
-    echo "\n... web app check complete\n"
+    echo "... web app check complete"
 fi
 
 if [ ! -f "./database/authentication_models.py" ] 
@@ -78,8 +70,9 @@ then
     echo "then stop mysql-container\n"
     exit 1
 else
-    echo "\n... security check complete\n"
+    echo "... security check complete"
 fi
+echo " "
 
 set -x # echo commands
 
@@ -90,13 +83,8 @@ az group create --name $resourcegroup --location "westus"
 az appservice plan create --name myAppServicePlan --resource-group $resourcegroup --sku S1 --is-linux
 
 # create docker compose app
-az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
+az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file ./devops/docker-compose-dev-azure-nginx/devops/docker-compose-dev-azure-nginx.yml
 
-# az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
-
-# az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml
-
-# devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml
 set +x # reset echo
 
 echo "enable logging: https://learn.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs#enable-application-logging-linuxcontainer"
