@@ -92,6 +92,11 @@ az appservice plan create --name myAppServicePlan --resource-group $resourcegrou
 # create docker compose app
 az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
 
+# az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
+
+# az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml
+
+# devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml
 set +x # reset echo
 
 echo "enable logging: https://learn.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs#enable-application-logging-linuxcontainer"
