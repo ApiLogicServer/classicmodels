@@ -6,6 +6,11 @@
 # az webapp create --resource-group classicmodels_rg_ngnix --plan myAppServicePlan --name classicmodels_ngnix --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
 # Site names only allow alphanumeric characters and hyphens, cannot start or end in a hyphen, and must be less than 64 chars.
 
+# az webapp create --resource-group classicmodels_rg_ngnix --plan myAppServicePlan --name classicmodelsngnix --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml
+# No such file or directory: 'devops/docker-compose-dev-azure-ngnix/docker-compose-dev-azure-ngnix.yml'
+# docker-compose-dev-azure-nginx
+# docker-compose-dev-azure-nginx.yml
+# ok: devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml
 
 projectname="classicmodelsngnix"  # lower case, only.  not unique in resourcegroup
 resourcegroup="classicmodels_rg_ngnix"
