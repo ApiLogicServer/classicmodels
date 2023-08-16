@@ -1,6 +1,6 @@
 # preferred...
 # cd <project>
-# sh devops/docker-compose-dev-local-nginx/docker-compose.sh
+# sh devops/docker-compose-dev-azure-nginx/docker-compose.sh
 
 version: "3.5"
 
