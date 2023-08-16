@@ -15,7 +15,7 @@ version="1.0.0"
 # login to Azure Portal CLI (substitute your github account for apilogicserver)
 # git clone https://github.com/apilogicserver/classicmodels.git
 # cd classicmodels
-# sh devops/docker-compose-dev-azure/azure-deploy.sh
+# sh devops/docker-compose-dev-azure-nginx/azure-deploy.sh
 
 echo " "
 if [ "$#" -eq 0 ]; then
