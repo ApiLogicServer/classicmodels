@@ -74,8 +74,8 @@ az group create --name $resourcegroup --location "westus"
 az appservice plan create --name myAppServicePlan --resource-group $resourcegroup --sku S1 --is-linux
 
 # create docker compose app
-az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file ./devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure.yml
-# No such file or directory: './devops/docker-compose-dev-azure-nginx/devops/docker-compose-dev-azure-nginx.yml'
+az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file ./devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml
+#  No such file or directory: './devops/docker-compose-dev-azure-nginx/devops/docker-compose-dev-azure-nginx.yml'
 
 set +x # reset echo
 
