@@ -43,7 +43,7 @@ For information on Managing API Logic Projects, [click here](https://apilogicser
 
 | About                    | Info                               |
 |:-------------------------|:-----------------------------------|
-| Created                  | August 16, 2023 17:22:08                      |
+| Created                  | August 16, 2023 20:47:00                      |
 | API Logic Server Version | 09.02.10           |
 | Created in directory     | ../../../servers/classicmodels |
 | API Name                 | api          |

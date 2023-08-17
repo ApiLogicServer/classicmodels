@@ -1,7 +1,7 @@
 # cd <project>
 # sh devops/docker-compose-dev-azure-nginx/docker-compose.sh
 
-# fixme - image name
+# FIXME ports
 
 version: "3.5"
 
@@ -22,7 +22,7 @@ services:
             # relative path - thanks https://stackoverflow.com/questions/46907558/docker-compose-relative-paths-vs-docker-volume
             # - /Users/val/dev/ApiLogicServer/ApiLogicServer-dev/org_git/docker-compose-nw-postgres:/app
             # - ./../..:/app
-            - ${WEBAPP_STORAGE_HOME}/classicmodels/devops/docker-compose-dev-azure-nginxz;/app
+            - ${WEBAPP_STORAGE_HOME}/classicmodels/devops/docker-compose-dev-azure-nginx:/app
         # https://stackoverflow.com/questions/39460892/gunicorn-no-module-named-myproject
         command: /usr/local/bin/gunicorn --reload --workers 2 --worker-connections 2 --access-logfile=- --pythonpath /app -b :5000 api_logic_server_run:flask_app 
         # command:  bash /app/start.sh
