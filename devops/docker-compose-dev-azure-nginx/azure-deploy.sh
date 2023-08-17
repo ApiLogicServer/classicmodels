@@ -96,3 +96,9 @@ echo "Completed.  Browse to the app:"
 echo "https://$projectname.azurewebsites.net"
 echo " "
 
+# https://classicmodelsngnix.azurewebsites.net
+# https://classicmodelsngnix.azurewebsites.net
+
+# az container logs --resource-group classicmodels_rg_ngnix --name classicmodelsngnix
+
+#  YamlException: (Line: 22, Col: 15, Idx: 942) - (Line: 22, Col: 27, Idx: 954): Bind mount must start with ${WEBAPP_STORAGE_HOME}.
