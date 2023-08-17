@@ -15,7 +15,7 @@ version="1.0.0"
 # login to Azure Portal CLI (substitute your github account for apilogicserver)
 # git clone https://github.com/apilogicserver/classicmodels.git
 # cd classicmodels
-# sh devops/docker-compose-dev-azure-nginx/azure-deploy.sh
+# sh devops/docker-compose-dev-azure/azure-deploy.sh
 
 echo " "
 if [ "$#" -eq 0 ]; then
@@ -74,8 +74,7 @@ az group create --name $resourcegroup --location "westus"
 az appservice plan create --name myAppServicePlan --resource-group $resourcegroup --sku S1 --is-linux
 
 # create docker compose app
-az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name $projectname --multicontainer-config-type compose --multicontainer-config-file ./devops/docker-compose-dev-azure-nginx/docker-compose-dev-azure-nginx.yml
-#  No such file or directory: './devops/docker-compose-dev-azure-nginx/devops/docker-compose-dev-azure-nginx.yml'
+az webapp create --resource-group $resourcegroup --plan myAppServicePlan --name classicmodels --multicontainer-config-type compose --multicontainer-config-file devops/docker-compose-dev-azure/docker-compose-dev-azure.yml
 
 set +x # reset echo
 
