@@ -1,24 +1,25 @@
-az container logs --resource-group classicmodels_rg_ngnix --name classicmodelsngnix
+Volume Mount subpath cannot be a symbolic link to host VM. subPath: /classicmodels/devops/docker-compose-dev-azure-nginx, hostdirectory:
 
 Connecting...
-2023-08-17T03:59:27  Welcome, you are now connected to log-streaming service.
+2023-08-17T04:25:49  Welcome, you are now connected to log-streaming service.
 Starting Log Tail -n 10 of existing logs ----
-/home/LogFiles/__lastCheckTime.txt  (https://classicmodelsngnix.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)08/17/2023 03:59:04
+/home/LogFiles/__lastCheckTime.txt  (https://classicmodelsngnix.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)08/17/2023 04:22:14
 /home/LogFiles/kudu/trace/52a47f0bb438-06bf8318-359a-4090-a60e-90b58b1147f1.txt  (https://classicmodelsngnix.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/52a47f0bb438-06bf8318-359a-4090-a60e-90b58b1147f1.txt)
 2023-08-17T00:50:57  Startup Request, url: /api/logstream/, method: GET, type: request, pid: 86,1,17, ScmType: None
 /home/LogFiles/kudu/trace/c1369ebaa30f-686e485a-ff7f-4f39-8477-611d041a6291.txt  (https://classicmodelsngnix.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/c1369ebaa30f-686e485a-ff7f-4f39-8477-611d041a6291.txt)
 2023-08-17T00:16:23  Startup Request, url: /detectors, method: GET, type: request, pid: 86,1,7, ScmType: None
 /home/LogFiles/2023_08_17_lw1sdlwk00009T_api-logic-server_docker.log  (https://classicmodelsngnix.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_17_lw1sdlwk00009T_api-logic-server_docker.log)
 /home/LogFiles/2023_08_17_lw1sdlwk00009T_docker.log  (https://classicmodelsngnix.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_17_lw1sdlwk00009T_docker.log)
-2023-08-17T02:45:18.502660225Z 2023-08-17T02:45:18.492934Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
-2023-08-17T02:45:18.887571497Z 2023-08-17T02:45:18.887102Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
-2023-08-17T02:45:18.894982383Z 2023-08-17T02:45:18.887715Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-2023-08-17T02:45:18.906653375Z 2023-08-17T02:45:18.906278Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
-2023-08-17T02:45:19.046575676Z 2023-08-17T02:45:19.046442Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.23'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
 2023-08-17T02:48:50.151Z INFO  - Stopping site classicmodelsngnix because it failed during startup.
 2023-08-17T03:59:04.770Z INFO  - Starting multi-container app..
 2023-08-17T03:59:05.424Z ERROR - multi-container unit was not started successfully
 2023-08-17T03:59:05.658Z INFO  - Stopping site classicmodelsngnix because it failed during startup.
+2023-08-17T04:04:12.894Z INFO  - Starting multi-container app..
+2023-08-17T04:04:13.503Z ERROR - multi-container unit was not started successfully
+2023-08-17T04:04:13.752Z INFO  - Stopping site classicmodelsngnix because it failed during startup.
+2023-08-17T04:22:14.706Z INFO  - Starting multi-container app..
+2023-08-17T04:22:18.828Z ERROR - multi-container unit was not started successfully
+2023-08-17T04:22:19.089Z INFO  - Stopping site classicmodelsngnix because it failed during startup.
 /home/LogFiles/2023_08_17_lw1sdlwk00009T_mysql-service_docker.log  (https://classicmodelsngnix.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_17_lw1sdlwk00009T_mysql-service_docker.log)
 /home/LogFiles/2023_08_17_lw1sdlwk00009T_nginx_docker.log  (https://classicmodelsngnix.scm.azurewebsites.net/api/vfs/LogFiles/2023_08_17_lw1sdlwk00009T_nginx_docker.log)
 Ending Log Tail of existing logs ---
