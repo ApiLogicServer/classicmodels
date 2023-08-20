@@ -1,5 +1,5 @@
 about:
-  date: August 17, 2023 07:20:36
+  date: August 19, 2023 20:58:42
   recent_changes: works with modified safrs-react-admin
   version: 0.0.0
 api_root: '{http_type}://{swagger_host}:{port}/{api}'
@@ -96,14 +96,14 @@ resources:
     user_key: employeeNumber
   Office:
     attributes:
-    - label: ' office Code*'
-      name: officeCode
+    - label: ' phone*'
+      name: phone
       required: true
       search: true
       sort: true
-    - name: city
+    - name: officeCode
       required: true
-    - name: phone
+    - name: city
       required: true
     - name: addressLine1
       required: true
@@ -122,7 +122,7 @@ resources:
       name: EmployeeList
       resource: Employee
     type: Office
-    user_key: officeCode
+    user_key: phone
   Order:
     attributes:
     - label: ' order Number*'
@@ -164,11 +164,11 @@ resources:
     - name: orderNumber
     - name: productCode
       required: true
-    - name: quantityOrdered
-      required: true
     - name: priceEach
       required: true
     - name: orderLineNumber
+      required: true
+    - name: quantityOrdered
       required: true
     tab_groups:
     - direction: toone
@@ -207,14 +207,14 @@ resources:
     user_key: customerNumber
   Product:
     attributes:
-    - label: ' product Code*'
-      name: productCode
+    - label: ' product Name*'
+      name: productName
       required: true
       search: true
       sort: true
     - name: productLine
       required: true
-    - name: productName
+    - name: productCode
       required: true
     - name: productScale
       required: true
@@ -240,7 +240,7 @@ resources:
       name: productline
       resource: Productline
     type: Product
-    user_key: productCode
+    user_key: productName
   Productline:
     attributes:
     - label: ' product Line*'

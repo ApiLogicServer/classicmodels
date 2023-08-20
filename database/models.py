@@ -10,7 +10,7 @@ from sqlalchemy.ext.declarative import declarative_base
 # Alter this file per your database maintenance policy
 #    See https://apilogicserver.github.io/Docs/Project-Rebuild/#rebuilding
 #
-# Created:  August 17, 2023 07:20:36
+# Created:  August 19, 2023 20:58:00
 # Database: mysql+pymysql://root:p@localhost:3306/classicmodels
 # Dialect:  mysql
 #
