@@ -1,5 +1,5 @@
 about:
-  date: August 19, 2023 20:58:42
+  date: August 21, 2023 15:44:27
   recent_changes: works with modified safrs-react-admin
   version: 0.0.0
 api_root: '{http_type}://{swagger_host}:{port}/{api}'
@@ -11,13 +11,13 @@ info:
 resources:
   Customer:
     attributes:
-    - label: ' customer Number*'
-      name: customerNumber
+    - label: ' customer Name*'
+      name: customerName
+      required: true
       search: true
       sort: true
     - name: salesRepEmployeeNumber
-    - name: customerName
-      required: true
+    - name: customerNumber
     - name: contactLastName
       required: true
     - name: contactFirstName
@@ -51,18 +51,18 @@ resources:
       name: employee
       resource: Employee
     type: Customer
-    user_key: customerNumber
+    user_key: customerName
   Employee:
     attributes:
-    - label: ' employee Number*'
-      name: employeeNumber
+    - label: ' last Name*'
+      name: lastName
+      required: true
       search: true
       sort: true
     - name: officeCode
       required: true
     - name: reportsTo
-    - name: lastName
-      required: true
+    - name: employeeNumber
     - name: firstName
       required: true
     - name: extension
@@ -93,17 +93,17 @@ resources:
       name: Employee
       resource: Employee
     type: Employee
-    user_key: employeeNumber
+    user_key: lastName
   Office:
     attributes:
-    - label: ' phone*'
-      name: phone
+    - label: ' office Code*'
+      name: officeCode
       required: true
       search: true
       sort: true
-    - name: officeCode
-      required: true
     - name: city
+      required: true
+    - name: phone
       required: true
     - name: addressLine1
       required: true
@@ -122,7 +122,7 @@ resources:
       name: EmployeeList
       resource: Employee
     type: Office
-    user_key: phone
+    user_key: officeCode
   Order:
     attributes:
     - label: ' order Number*'
@@ -243,12 +243,12 @@ resources:
     user_key: productName
   Productline:
     attributes:
-    - label: ' product Line*'
-      name: productLine
-      required: true
+    - label: ' text Description*'
+      name: textDescription
       search: true
       sort: true
-    - name: textDescription
+    - name: productLine
+      required: true
     - name: htmlDescription
     - name: image
     tab_groups:
@@ -258,7 +258,7 @@ resources:
       name: ProductList
       resource: Product
     type: Productline
-    user_key: productLine
+    user_key: textDescription
 settings:
   HomeJS: http://localhost:5656/admin-app/home.js
   max_list_columns: 8

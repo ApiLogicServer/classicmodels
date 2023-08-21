@@ -14,7 +14,7 @@ from flask_jwt_extended import create_access_token
 # Alter this file per your database maintenance policy
 #    See https://apilogicserver.github.io/Docs/Project-Rebuild/#rebuilding
 #
-# Created:  August 20, 2023 07:15:24
+# Created:  August 21, 2023 15:46:14
 # Database: mysql+pymysql://root:p@localhost:3306/authdb
 # Dialect:  mysql
 #
