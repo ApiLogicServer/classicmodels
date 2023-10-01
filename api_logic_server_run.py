@@ -2,7 +2,7 @@
 
 ###############################################################################
 #
-#    This file initializes and starts the API Logic Server (v 09.02.18, August 22, 2023 08:42:55):
+#    This file initializes and starts the API Logic Server (v 09.04.00, October 01, 2023 06:34:17):
 #        $ python3 api_logic_server_run.py [--help]
 #
 #    Then, access the Admin App and API via the Browser, eg:  
@@ -16,6 +16,7 @@
 #
 ###############################################################################
 
+start_up_message = "normal start"
 
 import traceback
 try:
@@ -116,7 +117,7 @@ if debug_value is not None:  # > export APILOGICPROJECT_DEBUG=True
         app_logger.setLevel(logging.DEBUG)
         app_logger.debug(f'\nDEBUG level set from env\n')
 app_logger.info(f'\nAPI Logic Project ({project_name}) Starting with CLI args: \n.. {args}\n')
-app_logger.info(f'Created August 22, 2023 08:42:55 at {str(current_path)}\n')
+app_logger.info(f'Created October 01, 2023 06:34:17 at {str(current_path)}\n')
 
 
 class ValidationErrorExt(ValidationError):
@@ -132,6 +133,39 @@ class ValidationErrorExt(ValidationError):
         self.message = message
         self.api_code = api_code
         self.detail: TypedDict = detail
+
+
+def validate_db_uri(flask_app):
+    """
+
+    For sqlite, verify the SQLALCHEMY_DATABASE_URI file exists
+
+        * Since the name is not reported by SQLAlchemy
+
+    Args:
+        flask_app (_type_): initialize flask app
+    """
+
+    db_uri = flask_app.config['SQLALCHEMY_DATABASE_URI']
+    app_logger.debug(f'sqlite_db_path validity check with db_uri: {db_uri}')
+    if 'sqlite' not in db_uri:
+        return
+    sqlite_db_path = ""
+    if db_uri.startswith('sqlite:////'):  # eg, sqlite:////Users/val/dev/ApiLogicServer/ApiLogicServer-dev/servers/ai_customer_orders/database/db.sqlite
+        sqlite_db_path = Path(db_uri[9:])
+        app_logger.debug(f'\t.. Absolute: {str(sqlite_db_path)}')
+    else:                                # eg, sqlite:///../database/db.sqlite
+        db_relative_path = db_uri[10:]
+        db_relative_path = db_relative_path.replace('../', '') # relative
+        sqlite_db_path = Path(os.getcwd()).joinpath(db_relative_path)
+        app_logger.debug(f'\t.. Relative: {str(sqlite_db_path)}')
+        if db_uri == 'sqlite:///database/db.sqlite':
+            raise ValueError(f'This fails, please use; sqlite:///../database/db.sqlite')
+    if sqlite_db_path.is_file():
+        app_logger.debug(f'\t.. sqlite_db_path is a valid file\n')
+    else:  # remove this if you wish
+        raise ValueError(f'sqlite database does not exist: {str(sqlite_db_path)}')
+
 
 
 # ==========================================================
@@ -284,13 +318,15 @@ if args.verbose:
 if app_logger.getEffectiveLevel() <= logging.DEBUG:
     util.sys_info(flask_app.config)
 app_logger.debug(f"\nENV args: \n{args}\n\n")
+validate_db_uri(flask_app)
 
 api_logic_server_setup(flask_app, args)
 
 AdminLoader.admin_events(flask_app = flask_app, args = args, validation_error = ValidationError)
 
 if __name__ == "__main__":
-    msg = f'API Logic Project loaded (not WSGI), version 09.02.18\n'
+    msg = f'API Logic Project loaded (not WSGI), version 09.04.00\n'
+    msg += f'.. startup message: {start_up_message}\n'
     if is_docker():
         msg += f' (running from docker container at flask_host: {args.flask_host} - may require refresh)\n'
     else:
@@ -312,7 +348,9 @@ if __name__ == "__main__":
 
     flask_app.run(host=args.flask_host, threaded=True, port=args.port)
 else:
-    msg = f'API Logic Project Loaded (WSGI), version 09.02.18\n'
+    msg = f'API Logic Project Loaded (WSGI), version 09.04.00\n'
+    msg += f'.. startup message: {start_up_message}\n'
+
     if is_docker():
         msg += f' (running from docker container at {args.flask_host} - may require refresh)\n'
     else:

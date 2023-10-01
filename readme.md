@@ -115,9 +115,9 @@ For information on Managing API Logic Projects, [click here](https://apilogicser
 
 | About                    | Info                               |
 |:-------------------------|:-----------------------------------|
-| Created                  | August 22, 2023 08:42:55                      |
-| API Logic Server Version | 09.02.18           |
-| Created in directory     | classicmodels |
+| Created                  | October 01, 2023 06:34:16                      |
+| API Logic Server Version | 09.04.00           |
+| Created in directory     | ../../../servers/classicmodels |
 | API Name                 | api          |
 | Execution begins with    | `api_logic_server_run.py`          |
 
@@ -188,3 +188,9 @@ This generated project also contains a React Admin app:
 * Multi-table - master / details (with tab sheets)
 * Intelligent layout - favorite fields first, predictive joins, etc
 * Logic Aware - updates are monitored by business logic
+
+&nbsp;
+
+### Python Tips
+
+If you are new to Python, check out [these tips](https://apilogicserver.github.io/Docs/Tech-Python/).
